@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.microsoft.com/sharepoint/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://schemas.microsoft.com/sharepoint/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/sharepoint/soap/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="GetListCollection">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListCollectionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listProperties">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="newFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="updateFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="listVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="templateID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListAndView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListAndViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListAndViewResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachmentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAttachmentCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachmentCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttachmentCollectionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attachment" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAttachmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateListItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updates">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateListItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateListItemsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListItemChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="viewFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="since" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contains">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListItemChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListItemChangesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="query">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="viewFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="rowLimit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryOptions">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListItemsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="GetListCollectionSoapIn">
+    <part name="parameters" element="s0:GetListCollection" />
+  </message>
+  <message name="GetListCollectionSoapOut">
+    <part name="parameters" element="s0:GetListCollectionResponse" />
+  </message>
+  <message name="DeleteListSoapIn">
+    <part name="parameters" element="s0:DeleteList" />
+  </message>
+  <message name="DeleteListSoapOut">
+    <part name="parameters" element="s0:DeleteListResponse" />
+  </message>
+  <message name="UpdateListSoapIn">
+    <part name="parameters" element="s0:UpdateList" />
+  </message>
+  <message name="UpdateListSoapOut">
+    <part name="parameters" element="s0:UpdateListResponse" />
+  </message>
+  <message name="AddListSoapIn">
+    <part name="parameters" element="s0:AddList" />
+  </message>
+  <message name="AddListSoapOut">
+    <part name="parameters" element="s0:AddListResponse" />
+  </message>
+  <message name="GetListAndViewSoapIn">
+    <part name="parameters" element="s0:GetListAndView" />
+  </message>
+  <message name="GetListAndViewSoapOut">
+    <part name="parameters" element="s0:GetListAndViewResponse" />
+  </message>
+  <message name="GetListSoapIn">
+    <part name="parameters" element="s0:GetList" />
+  </message>
+  <message name="GetListSoapOut">
+    <part name="parameters" element="s0:GetListResponse" />
+  </message>
+  <message name="DeleteAttachmentSoapIn">
+    <part name="parameters" element="s0:DeleteAttachment" />
+  </message>
+  <message name="DeleteAttachmentSoapOut">
+    <part name="parameters" element="s0:DeleteAttachmentResponse" />
+  </message>
+  <message name="GetAttachmentCollectionSoapIn">
+    <part name="parameters" element="s0:GetAttachmentCollection" />
+  </message>
+  <message name="GetAttachmentCollectionSoapOut">
+    <part name="parameters" element="s0:GetAttachmentCollectionResponse" />
+  </message>
+  <message name="AddAttachmentSoapIn">
+    <part name="parameters" element="s0:AddAttachment" />
+  </message>
+  <message name="AddAttachmentSoapOut">
+    <part name="parameters" element="s0:AddAttachmentResponse" />
+  </message>
+  <message name="UpdateListItemsSoapIn">
+    <part name="parameters" element="s0:UpdateListItems" />
+  </message>
+  <message name="UpdateListItemsSoapOut">
+    <part name="parameters" element="s0:UpdateListItemsResponse" />
+  </message>
+  <message name="GetListItemChangesSoapIn">
+    <part name="parameters" element="s0:GetListItemChanges" />
+  </message>
+  <message name="GetListItemChangesSoapOut">
+    <part name="parameters" element="s0:GetListItemChangesResponse" />
+  </message>
+  <message name="GetListItemsSoapIn">
+    <part name="parameters" element="s0:GetListItems" />
+  </message>
+  <message name="GetListItemsSoapOut">
+    <part name="parameters" element="s0:GetListItemsResponse" />
+  </message>
+  <portType name="ListsSoap">
+    <operation name="GetListCollection">
+      <input message="s0:GetListCollectionSoapIn" />
+      <output message="s0:GetListCollectionSoapOut" />
+    </operation>
+    <operation name="DeleteList">
+      <input message="s0:DeleteListSoapIn" />
+      <output message="s0:DeleteListSoapOut" />
+    </operation>
+    <operation name="UpdateList">
+      <input message="s0:UpdateListSoapIn" />
+      <output message="s0:UpdateListSoapOut" />
+    </operation>
+    <operation name="AddList">
+      <input message="s0:AddListSoapIn" />
+      <output message="s0:AddListSoapOut" />
+    </operation>
+    <operation name="GetListAndView">
+      <input message="s0:GetListAndViewSoapIn" />
+      <output message="s0:GetListAndViewSoapOut" />
+    </operation>
+    <operation name="GetList">
+      <input message="s0:GetListSoapIn" />
+      <output message="s0:GetListSoapOut" />
+    </operation>
+    <operation name="DeleteAttachment">
+      <input message="s0:DeleteAttachmentSoapIn" />
+      <output message="s0:DeleteAttachmentSoapOut" />
+    </operation>
+    <operation name="GetAttachmentCollection">
+      <input message="s0:GetAttachmentCollectionSoapIn" />
+      <output message="s0:GetAttachmentCollectionSoapOut" />
+    </operation>
+    <operation name="AddAttachment">
+      <input message="s0:AddAttachmentSoapIn" />
+      <output message="s0:AddAttachmentSoapOut" />
+    </operation>
+    <operation name="UpdateListItems">
+      <input message="s0:UpdateListItemsSoapIn" />
+      <output message="s0:UpdateListItemsSoapOut" />
+    </operation>
+    <operation name="GetListItemChanges">
+      <input message="s0:GetListItemChangesSoapIn" />
+      <output message="s0:GetListItemChangesSoapOut" />
+    </operation>
+    <operation name="GetListItems">
+      <input message="s0:GetListItemsSoapIn" />
+      <output message="s0:GetListItemsSoapOut" />
+    </operation>
+  </portType>
+  <binding name="ListsSoap" type="s0:ListsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetListCollection">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetListCollection" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteList">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/DeleteList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateList">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/UpdateList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddList">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/AddList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetListAndView">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetListAndView" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetList">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteAttachment">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/DeleteAttachment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAttachmentCollection">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetAttachmentCollection" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddAttachment">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/AddAttachment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateListItems">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/UpdateListItems" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetListItemChanges">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetListItemChanges" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetListItems">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetListItems" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Lists">
+    <port name="ListsSoap" binding="s0:ListsSoap">
+      <soap:address location="http://spsdevelopment/sites/DocumentWebService/_vti_bin/Lists.asmx" />
+    </port>
+  </service>
+</definitions>

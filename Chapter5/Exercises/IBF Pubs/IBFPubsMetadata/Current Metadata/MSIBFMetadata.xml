@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Metadata Version="1.0.0.0" xmlns="http://schemas.microsoft.com/InformationBridge/2004/Metadata">
+  <MetadataScopes xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MetadataScope Name="InformationBridge" Version="1.0.0.0" DefaultEntityName="Search">
+      <Entities>
+        <Entity Name="Search" DefaultReferenceSchemaName="NullReference" DefaultViewName="Search">
+          <Views>
+            <View Name="Search" SchemaName="MSIBF.Search" IsList="false">
+              <MenuItemDefinition MenuType="0">
+              </MenuItemDefinition>
+              <ViewLocators>
+                <ViewLocator ReferenceSchemaName="NullReference">
+                  <OperationInstance OperationName="LoadSearchFromSearchPort" Index="0">
+                    <TransformationInstances>
+                      <TransformationInstance TransformationName="LoadSearchFromSearchPort" Index="1" InputOperationIndex="0" InputOperationOutputSchemaIndex="1">
+                      </TransformationInstance>
+                    </TransformationInstances>
+                  </OperationInstance>
+                </ViewLocator>
+              </ViewLocators>
+              <Actions>
+                <Action Name="ShowDefaultSearchCriteriaRegion" IsSequentialExecution="false">
+                  <MenuItemDefinition MenuType="0">
+                  </MenuItemDefinition>
+                  <OperationInstances>
+                    <OperationInstance OperationName="BuildDefaultSearchCriteriaRegion" Index="1">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="-1001" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                    <OperationInstance OperationName="ShowRegion" Index="2">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                  </OperationInstances>
+                </Action>
+                <Action Name="ShowSearchCriteriaRegion" InputSchemaName="MSIBF.SearchType" IsSequentialExecution="false">
+                  <MenuItemDefinition MenuType="0">
+                  </MenuItemDefinition>
+                  <OperationInstances>
+                    <OperationInstance OperationName="BuildSearchCriteriaRegion" Index="1">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="-1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                        <TransformationInstance Index="2" InputOperationIndex="0" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                    <OperationInstance OperationName="ShowRegion" Index="2">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                  </OperationInstances>
+                </Action>
+                <Action Name="ShowSearchPickerRegion" IsSequentialExecution="false">
+                  <MenuItemDefinition MenuType="0">
+                  </MenuItemDefinition>
+                  <OperationInstances>
+                    <OperationInstance OperationName="BuildSearchPickerRegion" Index="1">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="-1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                    <OperationInstance OperationName="ShowRegion" Index="2">
+                      <TransformationInstances>
+                        <TransformationInstance Index="1" InputOperationIndex="1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                  </OperationInstances>
+                </Action>
+                <Action Name="ShowSearchResultsRegion" InputSchemaName="MSIBF.SearchType" IsSequentialExecution="false">
+                  <MenuItemDefinition MenuType="0">
+                  </MenuItemDefinition>
+                  <OperationInstances>
+                    <OperationInstance OperationName="ShowRegion" Index="1">
+                      <TransformationInstances>
+                        <TransformationInstance TransformationName="BuildSearchResultsRegion" Index="1" InputOperationIndex="0" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                  </OperationInstances>
+                </Action>
+              </Actions>
+            </View>
+          </Views>
+        </Entity>
+      </Entities>
+      <Ports>
+        <Port xsi:type="PortFileXml" Name="BuildDefaultSearchCriteriaRegionXslt" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:translator="http://schemas.microsoft.com/InformationBridge/2004/Translator" xmlns:inputs="http://schemas.microsoft.com/InformationBridge/2004/Inputs" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+              <xsl:output method="xml" encoding="utf-8">
+              </xsl:output>
+              <xsl:template match="/">
+                <xsl:apply-templates select="inputs:GetRootXPath(1)/msibf:SearchTypes">
+                </xsl:apply-templates>
+              </xsl:template>
+              <xsl:template match="msibf:SearchTypes">
+                <msibf:Region Enabled="true" MetadataScopeName="InformationBridge" EntityName="Search">
+                  <msibf:RegionProperties Caption="{translator:Translate('SearchCriteriaRegionCaption')}" Description="{translator:Translate('SearchCriteriaRegionDescription')}" ShowAs="ExpandedRegion" TypeName="Microsoft.InformationBridge.Framework.UI.Controls.SearchCriteriaRegion">
+                    <xsl:copy-of select="msibf:SearchType">
+                    </xsl:copy-of>
+                  </msibf:RegionProperties>
+                </msibf:Region>
+              </xsl:template>
+            </xsl:stylesheet>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="BuildSearchCriteriaRegionXslt" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:translator="http://schemas.microsoft.com/InformationBridge/2004/Translator" xmlns:inputs="http://schemas.microsoft.com/InformationBridge/2004/Inputs" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+              <xsl:output method="xml" encoding="utf-8">
+              </xsl:output>
+              <xsl:template match="/">
+                <xsl:apply-templates select="inputs:GetRootXPath(1)/msibf:SearchTypes">
+                </xsl:apply-templates>
+              </xsl:template>
+              <xsl:template match="msibf:SearchTypes">
+                <xsl:choose>
+                  <xsl:when test="count(msibf:SearchType)=1">
+                    <xsl:apply-templates select="msibf:SearchType">
+                    </xsl:apply-templates>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:apply-templates select="msibf:SearchType[@Name=inputs:GetRootXPath(2)/@Name]">
+                    </xsl:apply-templates>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:template>
+              <xsl:template match="msibf:SearchType">
+                <msibf:Action Enabled="true">
+                  <xsl:apply-templates select="msibf:SearchCriteria">
+                  </xsl:apply-templates>
+                  <msibf:Search>
+                    <msibf:SearchTypes>
+                      <xsl:copy-of select=".">
+                      </xsl:copy-of>
+                    </msibf:SearchTypes>
+                  </msibf:Search>
+                  <msibf:RegionProperties Caption="{translator:Translate('SearchCriteriaRegionCaption')}" Description="{translator:Translate('SearchCriteriaRegionDescription')}" ShowAs="ExpandedRegion">
+                  </msibf:RegionProperties>
+                </msibf:Action>
+              </xsl:template>
+              <xsl:template match="msibf:SearchCriteria">
+                <xsl:choose>
+                  <xsl:when test="@ActionName">
+                    <xsl:attribute name="AssociationName">
+                      <xsl:value-of select="@ActionName">
+                      </xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:apply-templates select="@MetadataSolutionName">
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="@MetadataScopeName">
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="@EntityName">
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="@ViewName">
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="@ReferenceSchemaName">
+                    </xsl:apply-templates>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:attribute name="AssociationName">ShowDefaultSearchCriteriaRegion</xsl:attribute>
+                    <xsl:attribute name="MetadataScopeName">InformationBridge</xsl:attribute>
+                    <xsl:attribute name="EntityName">Search</xsl:attribute>
+                    <xsl:attribute name="ViewName">Search</xsl:attribute>
+                    <xsl:attribute name="ReferenceSchemaName">SearchType</xsl:attribute>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:template>
+              <xsl:template match="@*">
+                <xsl:copy>
+                </xsl:copy>
+              </xsl:template>
+            </xsl:stylesheet>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="BuildSearchPickerRegionXslt" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:translator="http://schemas.microsoft.com/InformationBridge/2004/Translator" xmlns:inputs="http://schemas.microsoft.com/InformationBridge/2004/Inputs" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+              <xsl:output method="xml" encoding="utf-8">
+              </xsl:output>
+              <xsl:template match="/">
+                <xsl:apply-templates select="inputs:GetRootXPath(1)/msibf:SearchTypes">
+                </xsl:apply-templates>
+              </xsl:template>
+              <xsl:template match="msibf:SearchTypes">
+                <xsl:choose>
+                  <xsl:when test="count(msibf:SearchType)=1">
+                    <msibf:Action Enabled="true" AssociationName="ShowSearchCriteriaRegion" MetadataScopeName="InformationBridge" EntityName="Search" ViewName="Search" ReferenceSchemaName="NullReference">
+                      <msibf:RegionProperties Caption="{translator:Translate('SearchCriteriaRegionCaption')}" Description="{translator:Translate('SearchCriteriaRegionCaptionDescription')}" ShowAs="ExpandedRegion">
+                      </msibf:RegionProperties>
+                    </msibf:Action>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <msibf:Region Enabled="true" MetadataScopeName="InformationBridge" EntityName="Search">
+                      <msibf:RegionProperties Caption="{translator:Translate('SearchPickerRegionCaption')}" Description="{translator:Translate('SearchPickerRegionDescription')}" ShowAs="ExpandedRegion" TypeName="Microsoft.InformationBridge.Framework.UI.Controls.SearchPickerRegion">
+                        <msibf:Search>
+                          <xsl:for-each select="msibf:SearchType">
+                            <xsl:copy>
+                              <xsl:for-each select="@*">
+                                <xsl:copy>
+                                </xsl:copy>
+                              </xsl:for-each>
+                            </xsl:copy>
+                          </xsl:for-each>
+                        </msibf:Search>
+                      </msibf:RegionProperties>
+                    </msibf:Region>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:template>
+            </xsl:stylesheet>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="BuildSearchResultsRegionXslt" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:inputs="http://schemas.microsoft.com/InformationBridge/2004/Inputs" xmlns:translator="http://schemas.microsoft.com/InformationBridge/2004/Translator" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+              <xsl:output method="xml" encoding="utf-8">
+              </xsl:output>
+              <xsl:template match="/msibf:SearchType">
+                <msibf:Action Enabled="true" AssociationName="{@ActionName}">
+                  <xsl:apply-templates select="@MetadataSolutionName">
+                  </xsl:apply-templates>
+                  <xsl:apply-templates select="@MetadataScopeName">
+                  </xsl:apply-templates>
+                  <xsl:apply-templates select="@EntityName">
+                  </xsl:apply-templates>
+                  <xsl:apply-templates select="@ViewName">
+                  </xsl:apply-templates>
+                  <xsl:apply-templates select="@ReferenceSchemaName">
+                  </xsl:apply-templates>
+                  <xsl:copy-of select="msibf:InputReferenceInstance/*">
+                  </xsl:copy-of>
+                  <msibf:RegionProperties Caption="{translator:Translate('SearchResultsRegionCaption')}" Description="{translator:Translate('SearchResultsRegionDescription')}" ShowAs="ExpandedRegion">
+                  </msibf:RegionProperties>
+                </msibf:Action>
+              </xsl:template>
+              <xsl:template match="@*">
+                <xsl:copy>
+                </xsl:copy>
+              </xsl:template>
+            </xsl:stylesheet>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="MSIBF.Schemas" IsCached="false" AuthenticationTypeValue="Windows">
+          <Data>
+            <xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://schemas.microsoft.com/InformationBridge/2004" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+              <!--
+		Root Element:	Associations
+		Operation:		QueryMenu, Custom/ShowAssociations.
+		Commands:		QueryMenu, Navigation.
+		Description:	The QueryMenu schema is UI agnostic; the ShowAssociations schema is its 
+						extension. It is easier to read and write the shared schema then to use 
+						extensions or substitution groups, but some parts of it might not be ever
+						used/generated by the QueryMenu operation.
+	-->
+              <xs:element name="Associations">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Properties">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="msibf:ViewProperties" minOccurs="0">
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                      <xs:element ref="msibf:Action">
+                      </xs:element>
+                      <xs:element ref="msibf:Region">
+                      </xs:element>
+                      <xs:element ref="msibf:Relationship">
+                      </xs:element>
+                      <xs:element ref="msibf:ViewReference">
+                      </xs:element>
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Root Element:	Region
+		Operation:		Custom/ShowRegion, Custom/ShowDialog
+		Descripyion:	The region can appear as a part of the associations sequence or standalone.
+	-->
+              <xs:element name="Action" type="msibf:AssociationType">
+              </xs:element>
+              <xs:element name="Region" type="msibf:AssociationType">
+              </xs:element>
+              <xs:element name="Relationship" type="msibf:AssociationType">
+              </xs:element>
+              <xs:element name="ViewReference" type="msibf:AssociationType">
+              </xs:element>
+              <!--
+		Root Element:	Properties
+		Operation:		ShowAssociations
+		Descripyion:	Description for the pane that shows associations
+	-->
+              <xs:element name="ViewProperties" type="msibf:ViewPropertiesType">
+              </xs:element>
+              <!--
+		Root Element:	Extension
+		Operation:		Custom/LoadExtension
+	-->
+              <xs:element name="Extension">
+                <xs:complexType>
+                  <xs:attributeGroup ref="msibf:ClassAttributes">
+                  </xs:attributeGroup>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Root Element:	Text
+		Operation:		Custom/InsertText
+	-->
+              <xs:element name="Text" type="xs:string">
+              </xs:element>
+              <!--
+		Root Element:	Message
+		Operation:		Custom/ShowMessage
+	-->
+              <xs:element name="Message">
+                <xs:complexType>
+                  <xs:attributeGroup ref="msibf:CaptionAttributes">
+                  </xs:attributeGroup>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Root Element:	AnnotatedReferences
+		Operation:		Custom/InsertResults
+		Description:	Annotated references wraps multiple AnnotatedReference elements
+	-->
+              <xs:element name="AnnotatedReferences">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="msibf:AnnotatedReference" minOccurs="0" maxOccurs="unbounded">
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Root Element:	AnnotatedReference
+		Operation:		Custom/InsertReference, Custom/ShowContext
+		Description:	Annotated reference wraps the reference itself, together with caption
+						attributes and optional text. The name of the reference element is not
+						known, but its position does not ever change.
+	-->
+              <xs:element name="AnnotatedReference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <!-- Substitution is required for this to validate the abstract reference -->
+                    <xs:element ref="msibf:AbstractReference">
+                    </xs:element>
+                    <xs:element ref="msibf:Text" minOccurs="0">
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attributeGroup ref="msibf:CaptionAttributes">
+                  </xs:attributeGroup>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Element:		AbstractReference
+		Description:	The global element defining the substitution group. 
+						Because it is abstract, it cannot appear in the XML and it needs substitution.
+	-->
+              <xs:element name="AbstractReference" type="msibf:AbstractReferenceType">
+              </xs:element>
+              <!--
+		Complex Type:	ViewPropertiesType
+		Description:	UI hints for the pane that hosts associations.
+						The ShowAssociations operation assumes (but does not require) the presence of
+						the UI hints, but otherwise the schema of the content is open.
+	-->
+              <xs:complexType name="ViewPropertiesType">
+                <xs:sequence>
+                  <xs:any namespace="##any" processContents="lax" minOccurs="0">
+                  </xs:any>
+                </xs:sequence>
+                <xs:attribute name="Caption" type="xs:string" use="optional" default="">
+                </xs:attribute>
+                <xs:attribute name="Description" type="xs:string" use="optional" default="">
+                </xs:attribute>
+              </xs:complexType>
+              <!--
+		Complex Type:	AssociationType
+		Description:	Each association must have the attributes as defined by the QueryMenu operation.
+						The ShowAssociations operation assumes (but does not require) the presence of
+						the UI hints, but otherwise the schema of the content is open.
+	-->
+              <xs:complexType name="AssociationType" mixed="true">
+                <xs:sequence>
+                  <!-- The data to be passed to the region may contain and
+				and must contain the reference.
+				Substitution is required for this to validate the abstract reference.
+			-->
+                  <xs:element ref="msibf:AbstractReference">
+                  </xs:element>
+                  <!-- The data to be passed to the region may contain properties of type RegionPropertiesType -->
+                  <xs:element ref="msibf:RegionProperties" minOccurs="0">
+                  </xs:element>
+                </xs:sequence>
+                <xs:attributeGroup ref="msibf:AssociationAttributes">
+                </xs:attributeGroup>
+              </xs:complexType>
+              <!--
+		Complex Type:	AbstractReferenceType
+		Description:	A view reference type defined as open, so that it can contain any elements
+						and attributes. This might not be suitable in general, so it cannot be used
+						as the base type for references.
+						
+						Since this type is abstract it cannot be istantiated but a XML element instance
+						can be substituted with this type. An example of a reference and it's substitution:
+						<xs:element name="myReference" 
+							substitutionGroup="msibf:AbstractReference" type="msibf:AbstractReferenceType" />
+						<myReference msibf:MetadataScopeName="..." ... />
+	-->
+              <xs:complexType name="AbstractReferenceType" mixed="true">
+                <xs:complexContent>
+                  <xs:extension base="msibf:AbstractReferenceAttributesType">
+                    <xs:sequence>
+                      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="lax">
+                      </xs:any>
+                    </xs:sequence>
+                    <xs:anyAttribute namespace="##any" processContents="lax">
+                    </xs:anyAttribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+              <!--
+		Complex Type:	RegionPropertiesType
+		Description:	Some region properties are predefined, but additional attributes might be used.
+	-->
+              <xs:complexType name="RegionPropertiesType">
+                <xs:sequence>
+                  <xs:any namespace="##any" processContents="lax" minOccurs="0">
+                  </xs:any>
+                </xs:sequence>
+                <xs:attributeGroup ref="msibf:RegionAttributes">
+                </xs:attributeGroup>
+                <xs:anyAttribute namespace="##any" processContents="lax">
+                </xs:anyAttribute>
+              </xs:complexType>
+              <xs:element name="RegionProperties" type="msibf:RegionPropertiesType">
+              </xs:element>
+              <!--
+		Complex Type:	AbstractReferenceAttributesType
+		Description:	It is not possible in XSD to define the attributes for an element without
+						specifying the element name. This is a problem for view references - the
+						solution is to use substitution groups.
+						
+						The abstract reference type defines the common subtype - all the elements
+						in the substitution group must use a same type or a derived type.
+						The elements in the substitution group could use any element name.
+	-->
+              <xs:complexType name="AbstractReferenceAttributesType" abstract="true">
+                <xs:attribute name="MetadataScopeName" form="qualified" type="xs:string" use="required">
+                </xs:attribute>
+                <xs:attribute name="EntityName" form="qualified" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="ViewName" form="qualified" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="ReferenceSchemaName" form="qualified" type="xs:string" use="optional">
+                </xs:attribute>
+              </xs:complexType>
+              <!-- 
+		Element:		Credentials
+		Description:	This is the schema of the authentication data that 
+						the AuthenticationDefinitionOperationInstance of a Port must comply with.
+	-->
+              <xs:element name="Credentials">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="UserName" type="xs:string">
+                    </xs:element>
+                    <xs:element name="Password" type="xs:string">
+                    </xs:element>
+                    <xs:element name="DomainName" type="xs:string" minOccurs="0">
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <!-- 
+		Element:		Search
+		Description:	This is the schema of the metadata for Search. 
+						It contains a list of search types.
+	-->
+              <xs:element name="Search">
+                <xs:complexType>
+                  <xs:sequence>
+                    <!-- This is the list of search types (actions) available for the solution -->
+                    <xs:element name="SearchTypes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="msibf:SearchType" minOccurs="0" maxOccurs="unbounded">
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!-- 
+		Element:		SearchType
+		Description:	This is the schema of the one search type.
+						A search type is used to define one individual search action,
+						the associated reference used to invoke the action,
+						and the search criteria UI used to collect user input.
+	-->
+              <xs:element name="SearchType">
+                <xs:complexType>
+                  <xs:sequence>
+                    <!-- 
+				This is the xml framgent of the search criteria. 
+				It gets filed with user data and is used as reference for the search action invocation.
+				-->
+                    <xs:element name="InputReferenceInstance" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:any namespace="##any" processContents="lax" minOccurs="0">
+                          </xs:any>
+                        </xs:sequence>
+                        <xs:attribute name="Namespaces" use="required">
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <!--
+				This is the list of search criteria UI elements that persist data in the 
+				reference instance defined above.
+				-->
+                    <xs:element name="SearchCriteria" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <!-- This is the definition of one input control -->
+                          <xs:element name="SearchCriterion" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <!-- This is the list of possible values that 
+										pre-populate the list input control -->
+                                <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="Value" type="xs:string" use="optional">
+                                        </xs:attribute>
+                                        <xs:attribute name="Selected" type="xs:boolean" use="optional">
+                                        </xs:attribute>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="Caption" type="xs:string" use="required">
+                              </xs:attribute>
+                              <xs:attribute name="Description" type="xs:string" use="required">
+                              </xs:attribute>
+                              <xs:attribute name="Type" use="required">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:enumeration value="text">
+                                    </xs:enumeration>
+                                    <xs:enumeration value="list">
+                                    </xs:enumeration>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="Required" type="xs:boolean" use="required">
+                              </xs:attribute>
+                              <!-- 
+										This is the XPath of the element or attibute in the input reference
+										that will be storing the value of this control
+									-->
+                              <xs:attribute name="XPath" type="xs:string" use="required">
+                              </xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <!--
+							The attributes listed below are used to identify the action to execute
+							in order to show the search criteria. 
+						-->
+                        <xs:attribute name="MetadataScopeName" type="xs:string" use="optional">
+                        </xs:attribute>
+                        <xs:attribute name="EntityName" type="xs:string" use="optional">
+                        </xs:attribute>
+                        <xs:attribute name="ViewName" type="xs:string" use="optional">
+                        </xs:attribute>
+                        <xs:attribute name="ReferenceSchemaName" type="xs:string" use="optional">
+                        </xs:attribute>
+                        <xs:attribute name="MetadataSolutionName" type="xs:string" use="optional">
+                        </xs:attribute>
+                        <xs:attribute name="ActionName" type="xs:string" use="optional">
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" use="required">
+                  </xs:attribute>
+                  <xs:attribute name="Caption" type="xs:string" use="required">
+                  </xs:attribute>
+                  <!--
+				The attributes listed below are used to identify the action to execute
+				in order to perform the search.
+			-->
+                  <xs:attribute name="MetadataScopeName" type="xs:string" use="required">
+                  </xs:attribute>
+                  <xs:attribute name="EntityName" type="xs:string" use="optional">
+                  </xs:attribute>
+                  <xs:attribute name="ViewName" type="xs:string" use="optional">
+                  </xs:attribute>
+                  <xs:attribute name="ReferenceSchemaName" type="xs:string" use="optional">
+                  </xs:attribute>
+                  <xs:attribute name="MetadataSolutionName" type="xs:string" use="optional">
+                  </xs:attribute>
+                  <xs:attribute name="ActionName" type="xs:string" use="required">
+                  </xs:attribute>
+                  <!--
+				The Target attribute below can be used to indicate how the results of the
+				Search action are displayed. The default value is SearchRegion.
+				
+				When Target="SearchRegion" the results of the action will be displayed in one
+				new region in the Search Page. Use this option in case only one region is displayed
+				as the result of executing the search action.
+				
+				When Target="SearchPage" the results of the action will be displayed in the Search
+				Page. Use this option in case multiple regions are displayed ad the result of
+				executing the search action and the regions should appear in the Search Page. 
+				
+				When Target="ReferencesPage" the results of the action will be displayed in the References
+				Page. Use this option in case one or multiple regions are displayed as the result of
+				executing the search action and the regions should appear in the References Page. 
+			-->
+                  <xs:attribute name="Target" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="SearchRegion">
+                        </xs:enumeration>
+                        <xs:enumeration value="SearchPage">
+                        </xs:enumeration>
+                        <xs:enumeration value="ReferencesPage">
+                        </xs:enumeration>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <!-- 
+		Element:		HTML
+		Description:	The HTML and XHTML elements below define the schema of the xml 
+						inside RegionProperties when invoking the HTML region.
+						The element HTML can be used to pass arbitrary HTML content
+						to the HTML region encoded as xml string
+	-->
+              <xs:element name="HTML">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attributeGroup ref="msibf:HtmlRegionAttributes">
+                      </xs:attributeGroup>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <!-- 
+		Element:		XHTML
+		Description:	The XHTML element can be used to pass arbitrary XHTML content
+						to the HTML region
+	-->
+              <xs:element name="XHTML">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:any namespace="http://www.w3.org/1999/xhtml">
+                    </xs:any>
+                  </xs:sequence>
+                  <xs:attributeGroup ref="msibf:HtmlRegionAttributes">
+                  </xs:attributeGroup>
+                </xs:complexType>
+              </xs:element>
+              <!--
+		Attribute Group: HtmlRegionAttributes
+		Description:	 HtmlRegionAttributes contains a set of attributes to be used in 
+						conjunction with the HTML of XHTML elements when rendering
+						inside of an HTML region
+	-->
+              <xs:attributeGroup name="HtmlRegionAttributes">
+                <!--
+			The Width attribute is used to specify the width 
+			of the HTML display area of the HTML region. It has no effect when the
+			region is displayed in a page but it is considered when the region
+			appears in a dialog frame.
+		-->
+                <xs:attribute name="Width" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                      <xs:minInclusive value="0">
+                      </xs:minInclusive>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <!--
+			The Height attribute is used to specify the height 
+			of the HTML display area of the HTML region
+		-->
+                <xs:attribute name="Height" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                      <xs:minInclusive value="0">
+                      </xs:minInclusive>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <!--
+			The Scroll attribute is used to indicate if the HTML display
+			area of the HTML region should have a scroll bar or not.
+		-->
+                <xs:attribute name="Scroll" type="xs:boolean" use="optional">
+                </xs:attribute>
+              </xs:attributeGroup>
+              <!-- 
+		Attribute Group:	AssociationAttributes
+		Description:		Extends ReferenceAttributes
+	-->
+              <xs:attributeGroup name="AssociationAttributes">
+                <xs:attribute name="MetadataSolutionName" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="AssociationName" type="xs:string" use="required">
+                </xs:attribute>
+                <xs:attribute name="Enabled" type="xs:boolean" use="required">
+                </xs:attribute>
+                <xs:attribute name="MetadataScopeName" type="xs:string" use="required">
+                </xs:attribute>
+                <xs:attribute name="EntityName" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="ViewName" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="ReferenceSchemaName" type="xs:string" use="optional">
+                </xs:attribute>
+              </xs:attributeGroup>
+              <!--
+		Attribute Group:	RegionAttributes
+		Description:		Every region must have these attributes, even when displayed as a dialog.
+	-->
+              <xs:attributeGroup name="RegionAttributes">
+                <xs:attributeGroup ref="msibf:ClassAttributes">
+                </xs:attributeGroup>
+                <xs:attributeGroup ref="msibf:CaptionAttributes">
+                </xs:attributeGroup>
+                <xs:attribute name="RegionName" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="ShowAs" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="MenuItem">
+                      </xs:enumeration>
+                      <xs:enumeration value="ExpandedRegion">
+                      </xs:enumeration>
+                      <xs:enumeration value="CollapsedRegion">
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:attributeGroup>
+              <!--
+		Attribute Group:	ClassAttributes
+		Descripyion:		All the attributes, required to instantiate a .NET class - except the 
+							assembly. The operation should use the port to obtain the assembly.
+	-->
+              <xs:attributeGroup name="ClassAttributes">
+                <xs:attribute name="TypeName" type="xs:string" use="optional">
+                </xs:attribute>
+              </xs:attributeGroup>
+              <!--
+		Attribute Group:	CaptionAttributes
+		Description:		The caption is user visible string; the description is a longer string
+							often used as a tooltip.
+	-->
+              <xs:attributeGroup name="CaptionAttributes">
+                <xs:attribute name="Caption" type="xs:string" use="optional">
+                </xs:attribute>
+                <xs:attribute name="Description" type="xs:string" use="optional">
+                </xs:attribute>
+              </xs:attributeGroup>
+            </xs:schema>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="SearchTypes" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <Search xmlns="http://schemas.microsoft.com/InformationBridge/2004">
+              <SearchTypes>
+                <SearchType Name="BookSearch" Caption="Find Books" ActionName="ShowLibraryNow" Target="SearchRegion" MetadataScopeName="Pubs" EntityName="Library" ViewName="BasicView" ReferenceSchemaName="Author (PubsData)">
+                  <InputReferenceInstance Namespaces="n=&quot;PubsData&quot;">
+                    <Author xmlns="PubsData">
+                      <LastName>
+                      </LastName>
+                    </Author>
+                  </InputReferenceInstance>
+                  <SearchCriteria>
+                    <SearchCriterion Caption="Book Titles" Name="Titles" Type="text" Required="true" XPath="//n:LastName">
+                    </SearchCriterion>
+                  </SearchCriteria>
+                </SearchType>
+              </SearchTypes>
+            </Search>
+          </Data>
+        </Port>
+      </Ports>
+      <Operations>
+        <Operation xsi:type="OperationTransformationAggregation" Name="BuildDefaultSearchCriteriaRegion" EntityName="Search" TimeOut="0" TransformationName="BuildDefaultSearchCriteriaRegion">
+          <InputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Search" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Region" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+        <Operation xsi:type="OperationTransformationAggregation" Name="BuildSearchCriteriaRegion" EntityName="Search" TimeOut="0" TransformationName="BuildSearchCriteriaRegion">
+          <InputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Search" Index="1">
+            </SchemaInstance>
+            <SchemaInstance SchemaName="MSIBF.SearchType" Index="2">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Region" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+        <Operation xsi:type="OperationTransformationAggregation" Name="BuildSearchPickerRegion" EntityName="Search" TimeOut="0" TransformationName="BuildSearchPickerRegion">
+          <InputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Search" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Region" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+        <Operation xsi:type="OperationTransformationAggregation" Name="LoadSearchFromSearchPort" EntityName="Search" TimeOut="0">
+          <InputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Search" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Search" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+        <Operation xsi:type="OperationCustom" Name="ShowRegion" EntityName="Search" TimeOut="0" OperationTypeName="MSIBF.UI.ShowRegion">
+          <InputSchemas>
+            <SchemaInstance SchemaName="MSIBF.Region" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+        </Operation>
+      </Operations>
+      <Transformations>
+        <Transformation xsi:type="TransformationXsl" Name="BuildDefaultSearchCriteriaRegion" InputSchemaName="MSIBF.Search" OutputSchemaName="MSIBF.Region" PortName="BuildDefaultSearchCriteriaRegionXslt" ApplyTranslations="true">
+        </Transformation>
+        <Transformation xsi:type="TransformationXsl" Name="BuildSearchCriteriaRegion" InputSchemaName="MSIBF.Search" OutputSchemaName="MSIBF.Region" PortName="BuildSearchCriteriaRegionXslt" ApplyTranslations="true">
+        </Transformation>
+        <Transformation xsi:type="TransformationXsl" Name="BuildSearchPickerRegion" InputSchemaName="MSIBF.Search" OutputSchemaName="MSIBF.Region" PortName="BuildSearchPickerRegionXslt" ApplyTranslations="true">
+        </Transformation>
+        <Transformation xsi:type="TransformationXsl" Name="BuildSearchResultsRegion" InputSchemaName="MSIBF.SearchType" OutputSchemaName="MSIBF.Region" PortName="BuildSearchResultsRegionXslt" ApplyTranslations="true">
+        </Transformation>
+        <Transformation xsi:type="TransformationImmediatePort" Name="LoadSearchFromSearchPort" InputSchemaName="MSIBF.Search" OutputSchemaName="MSIBF.Search" PortName="SearchTypes">
+        </Transformation>
+      </Transformations>
+      <Schemas>
+        <Schema xsi:type="SchemaXsd" Name="MSIBF.Region" PortName="MSIBF.Schemas" Element="q1:Region" xmlns:q1="http://schemas.microsoft.com/InformationBridge/2004">
+        </Schema>
+        <Schema xsi:type="SchemaXsd" Name="MSIBF.Search" PortName="MSIBF.Schemas" Element="q2:Search" xmlns:q2="http://schemas.microsoft.com/InformationBridge/2004">
+        </Schema>
+        <Schema xsi:type="SchemaXsd" Name="MSIBF.SearchType" PortName="MSIBF.Schemas" Element="q3:SearchType" xmlns:q3="http://schemas.microsoft.com/InformationBridge/2004">
+        </Schema>
+        <Schema xsi:type="SchemaString" Name="NullReference">
+        </Schema>
+      </Schemas>
+      <Translations xmlns:md="http://schemas.microsoft.com/InformationBridge/2004/Metadata" xmlns:mdd="http://schemas.microsoft.com/InformationBridge/2004/MetadataDesigner/Schema">
+        <Translation Key="SearchCriteriaRegionCaption" Modifier="en-us" Value="Criteria" IsFallback="true">
+        </Translation>
+        <Translation Key="SearchCriteriaRegionDescription" Modifier="en-us" Value="Criteria" IsFallback="true">
+        </Translation>
+        <Translation Key="SearchPickerRegionCaption" Modifier="en-us" Value="Search Type" IsFallback="true">
+        </Translation>
+        <Translation Key="SearchPickerRegionDescription" Modifier="en-us" Value="Search Type" IsFallback="true">
+        </Translation>
+        <Translation Key="SearchResultsRegionCaption" Modifier="en-us" Value="Search Results" IsFallback="true">
+        </Translation>
+        <Translation Key="SearchResultsRegionDescription" Modifier="en-us" Value="Search Results" IsFallback="true">
+        </Translation>
+      </Translations>
+    </MetadataScope>
+    <MetadataScope Name="PubsScope" Version="1.0">
+      <Entities>
+        <Entity Name="Library">
+          <Views>
+            <View Name="BasicView" IsList="false">
+              <MenuItemDefinition MenuType="0">
+              </MenuItemDefinition>
+              <ViewLocators>
+                <ViewLocator ReferenceSchemaName="Author (PubsData)">
+                  <OperationInstance OperationName="GetBooks" Index="0">
+                    <TransformationInstances>
+                      <TransformationInstance Index="1" InputOperationIndex="-1" InputOperationOutputSchemaIndex="1">
+                      </TransformationInstance>
+                    </TransformationInstances>
+                  </OperationInstance>
+                </ViewLocator>
+              </ViewLocators>
+              <Actions>
+                <Action Name="ShowLibraryNow" Type="EnterContext" InputSchemaName="Author (PubsData)" IsSequentialExecution="false">
+                  <MenuItemDefinition MenuType="0">
+                  </MenuItemDefinition>
+                  <OperationInstances>
+                    <OperationInstance OperationName="ShowLibrary" Index="1">
+                      <TransformationInstances>
+                        <TransformationInstance TransformationName="ShowLibraryTransform" Index="1" InputOperationIndex="-1" InputOperationOutputSchemaIndex="1">
+                        </TransformationInstance>
+                      </TransformationInstances>
+                    </OperationInstance>
+                  </OperationInstances>
+                </Action>
+              </Actions>
+            </View>
+          </Views>
+        </Entity>
+      </Entities>
+      <Ports>
+        <Port xsi:type="PortAssembly" Name="IBFPubsUIPortAssembly" Location="C:\Documents and Settings\sab\My Documents\Visual Studio Projects\IBF Pubs\IBFPubsUI\bin\Release\IBFPubsUI.dll" IsCached="false" AuthenticationTypeValue="Windows">
+        </Port>
+        <Port xsi:type="PortFileXml" Name="IBFPubsUIPortFile" IsCached="false" AuthenticationTypeValue="Windows">
+          <Data>
+            <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+              <xsl:template match="/">
+                <msibf:Region Enabled="true" xmlns:msibf="http://schemas.microsoft.com/InformationBridge/2004">
+                  <msibf:RegionProperties RegionName="LibraryRegion" Caption="Books" Description="Book Information" TypeName="IBFPubsUI.UserControl1" ShowAs="ExpandedRegion">
+                    <xsl:copy-of select="/">
+                    </xsl:copy-of>
+                  </msibf:RegionProperties>
+                </msibf:Region>
+              </xsl:template>
+            </xsl:stylesheet>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="PubsData" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xs:schema elementFormDefault="qualified" targetNamespace="PubsData" xmlns:tns="PubsData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              <xs:import namespace="PubsService">
+              </xs:import>
+              <xs:element name="Author" type="tns:Author">
+              </xs:element>
+              <xs:complexType name="Author">
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string">
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:complexType name="ArrayOfBook">
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" ref="q1:Book" xmlns:q1="PubsService">
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:complexType name="Book">
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string">
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="Publisher" type="xs:string">
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:schema>
+          </Data>
+        </Port>
+        <Port xsi:type="PortFileXml" Name="PubsService" IsCached="false" AuthenticationTypeValue="None">
+          <Data>
+            <xs:schema elementFormDefault="qualified" targetNamespace="PubsService" xmlns:tns="PubsService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              <xs:import namespace="PubsData">
+              </xs:import>
+              <xs:element name="GetBooks">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" ref="q1:Author" xmlns:q1="PubsData">
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="GetBooksResponse">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="GetBooksResult" type="q2:ArrayOfBook" xmlns:q2="PubsData">
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Book" nillable="true" type="q3:Book" xmlns:q3="PubsData">
+              </xs:element>
+            </xs:schema>
+          </Data>
+        </Port>
+        <Port xsi:type="PortSoap" Name="Service1Soap" Location="http://localhost/IBFPubsService/Service1.asmx" IsCached="false" AuthenticationTypeValue="Windows">
+        </Port>
+      </Ports>
+      <Operations>
+        <Operation xsi:type="OperationSoapRequest" Name="GetBooks" TimeOut="0" IsUpdate="false" PortName="Service1Soap" SoapAction="PubsService/GetBooks" SoapBodyWrapper="q4:GetBooks" xmlns:q4="PubsService">
+          <InputSchemas>
+            <SchemaInstance SchemaName="Author (PubsData)" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="GetBooksResponse (PubsService)" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+        <Operation xsi:type="OperationCustom" Name="ShowLibrary" EntityName="Library" TimeOut="0" OperationTypeName="MSIBF.UI.ShowRegion" PortName="IBFPubsUIPortAssembly">
+          <InputSchemas>
+            <SchemaInstance SchemaName="BlankSchema" Index="1">
+            </SchemaInstance>
+          </InputSchemas>
+          <OutputSchemas>
+            <SchemaInstance SchemaName="BlankSchema" Index="1">
+            </SchemaInstance>
+          </OutputSchemas>
+        </Operation>
+      </Operations>
+      <Transformations>
+        <Transformation xsi:type="TransformationXsl" Name="ShowLibraryTransform" InputSchemaName="BlankSchema" OutputSchemaName="BlankSchema" PortName="IBFPubsUIPortFile" ApplyTranslations="true">
+        </Transformation>
+      </Transformations>
+      <Schemas>
+        <Schema xsi:type="SchemaXsd" Name="Author (PubsData)" PortName="PubsData" Element="q5:Author" xmlns:q5="PubsData">
+        </Schema>
+        <Schema xsi:type="SchemaString" Name="BlankSchema">
+        </Schema>
+        <Schema xsi:type="SchemaXsd" Name="GetBooksResponse (PubsService)" PortName="PubsService" Element="q6:GetBooksResponse" xmlns:q6="PubsService">
+        </Schema>
+      </Schemas>
+    </MetadataScope>
+  </MetadataScopes>
+  <OperationTypes xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <OperationType Name="MSIBF.UI.ShowRegion">
+    </OperationType>
+  </OperationTypes>
+  <Timestamp RetrieveTime="0001-01-01T00:00:00.0000000-05:00" Timestamp="0001-01-01T00:00:00.0000000-05:00" xmlns:md="http://schemas.microsoft.com/InformationBridge/2004/Metadata" xmlns:mdd="http://schemas.microsoft.com/InformationBridge/2004/MetadataDesigner/Schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MetadataScopeTimestamps>
+      <MetadataScopeTimestamp MetadataScopeName="InformationBridge" Timestamp="0001-01-01T00:00:00.0000000-05:00">
+        <EntityTimestamps>
+          <EntityTimestamp EntityName="Search" Timestamp="0001-01-01T00:00:00.0000000-05:00">
+          </EntityTimestamp>
+        </EntityTimestamps>
+      </MetadataScopeTimestamp>
+      <MetadataScopeTimestamp MetadataScopeName="PubsScope" Timestamp="0001-01-01T00:00:00.0000000-05:00">
+        <EntityTimestamps>
+          <EntityTimestamp EntityName="Library" Timestamp="0001-01-01T00:00:00.0000000-05:00">
+          </EntityTimestamp>
+        </EntityTimestamps>
+      </MetadataScopeTimestamp>
+    </MetadataScopeTimestamps>
+  </Timestamp>
+</Metadata>

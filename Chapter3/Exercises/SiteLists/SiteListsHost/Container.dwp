@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+	<Title>Site Lists Host Web Part</Title>
+	<Description>A host for the Site Lists</Description>
+	<Assembly>SiteListsHost</Assembly>
+	<TypeName>SiteListsHost.Container</TypeName>
+	<!-- Specify initial values for any additional base class or custom properties here. -->
+</WebPart>

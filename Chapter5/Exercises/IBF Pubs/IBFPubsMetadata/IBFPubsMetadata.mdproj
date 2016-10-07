@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetadataProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ProjectGuid="1cd0c4a2-71a5-4277-b94f-564318021702">
+  <Files />
+  <Folders>
+    <Folder SubType="CurrentMetadata" RelativePath="Current Metadata">
+      <Files>
+        <File SubType="Metadata" RelativePath="MSIBFMetadata.xml" />
+      </Files>
+      <Folders />
+    </Folder>
+    <Folder SubType="OriginalMetadata" RelativePath="Original Metadata">
+      <Files>
+        <File SubType="Metadata" RelativePath="MSIBFMetadata.xml" />
+      </Files>
+      <Folders />
+    </Folder>
+  </Folders>
+</MetadataProject>

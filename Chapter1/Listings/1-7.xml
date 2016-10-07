@@ -1,0 +1,20 @@
+<Module Name="Default" Url="" Path="">
+    <File Url="default.aspx" NavBarHome="True">
+        <View List="101" BaseViewID="0" WebPartZoneID="Left"/>
+        <View List="107" BaseViewID="0" WebPartZoneID="Left" WebPartOrder="2"/>
+        <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+           <![CDATA[
+           <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:iwp="http://schemas.microsoft.com/WebPart/v2/Image">
+                <Assembly>Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+        <TypeName>Microsoft.SharePoint.WebPartPages.ImageWebPart</TypeName>
+                <FrameType>None</FrameType>
+                <Title>Site Image</Title>
+                <iwp:ImageLink>/_layouts/images/homepage.gif</iwp:ImageLink>
+           </WebPart>
+           ]]>
+        </AllUsersWebPart>
+        <View List="103" BaseViewID="0" WebPartZoneID="Right" WebPartOrder="2"/>
+        <NavBarPage Name="Home" ID="1002" Position="Start">  </NavBarPage>
+        <NavBarPage Name="Home" ID="0" Position="Start">  </NavBarPage>
+    </File>
+</Module>

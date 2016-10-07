@@ -1,0 +1,3 @@
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Common\Smart Tag\Recognizers\IBFPubsSmartTag.AuthorRecognizer]
+"Filename"="C:\\[Path]\\IBF Pubs\\IBFPubsSmartTag\\bin\\Debug\\IBFPubsSmartTag.dll"
+"Managed"=dword:00000001

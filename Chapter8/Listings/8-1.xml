@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<templateCatalog>
+    <type FileExt="*">
+        <template name="(None)">
+            <description></description>
+            <url></url>
+            <sampleRenderingUrl></sampleRenderingUrl>
+        </template>
+    </type>
+    <type FileExt=".jpg .gif .jpeg .png .bmp">
+        <template name="(None)">
+            <description></description>
+            <url></url>
+            <sampleRenderingUrl></sampleRenderingUrl>
+        </template>
+    </type>
+    <type FileExt="contentxml">
+        <template name="Case Study Microsoft Office InfoPath forms">
+            <description></description>
+            <url>C:\Program Files\Microsoft Content Management
+    Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder
+    \TemplateCatalog\CaseStudyContent.xsl</url>
+            <sampleRenderingUrl>
+    /MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog
+    /SampleCaseStudyContent.xml</sampleRenderingUrl>
+        </template>
+        <template name="Microsoft Office WordML documents">
+            <description></description>
+           <url>C:\Program Files\Microsoft Content Management
+    Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder
+    \TemplateCatalog\WordNetHtml.xsl</url>
+            <sampleRenderingUrl>
+    /MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog
+    /SampleWordNetHtml.xml</sampleRenderingUrl>
+        </template>
+    </type>
+</templateCatalog>

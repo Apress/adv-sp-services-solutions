@@ -1,0 +1,18 @@
+<listitems xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+   xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+   xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema"
+    xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+
+   <rs:data ItemCount="1">
+      <z:row ows_FileRef="1;#sites/Test/Shared Documents/Document1.doc"
+      ows_Title="New Document"
+      ows_Customer="DataLan"
+      ows_Last_x0020_Modified="1;#2004-06-03 17:54:01"
+      ows_ID="1"
+      ows_owshiddenversion="8" ows_FSObjType="1;#0"
+      ows_FileLeafRef="1;#Document1.doc"
+      ows_Modified="2004-06-03 17:54:01"
+      ows_Editor="1;#SPS\administrator"
+      ows_DocIcon="doc" />
+   </rs:data>
+</listitems>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Metadata Version="1.0.0.0" xmlns="http://schemas.microsoft.com/InformationBridge/2004/Metadata">
+  <MetadataScopes xmlns:xsd=http://www.w3.org/2001/XMLSchema
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MetadataScope Name="CRM" Version="1.0">
+      <Entities>
+        <Entity Name="Company"
+            DefaultReferenceSchemaName="Company (CustomerData)">
+          <Views>
+            <View Name="CompanyInformation" IsList="false">
+              <MenuItemDefinition MenuType="0">
+              </MenuItemDefinition>
+              <ViewLocators>
+                <ViewLocator ReferenceSchemaName="CompanyName (CustomerData)">
+                  <OperationInstance OperationName="GetCompany" Index="0">
+                    <TransformationInstances>
+                      <TransformationInstance Index="1"
+                          InputOperationIndex="-1001">
+                      </TransformationInstance>
+                    </TransformationInstances>
+                  </OperationInstance>
+                </ViewLocator>
+              </ViewLocators>
+            </View>
+          </Views>
+        </Entity>
+      </Entities>

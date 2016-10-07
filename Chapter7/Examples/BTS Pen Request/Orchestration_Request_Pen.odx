@@ -1,0 +1,281 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="61bcfd92-3914-4a4f-952a-9d4e0ba4a77e" LowerBound="1.1" HigherBound="61.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BTS_Pen_Request" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="512958bb-d60c-4f53-8921-72a2cc7bf752" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Receive_Pen_Request" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3fc6bcc4-a750-4172-bff0-fe351e822b05" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_Receive" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="6ec68cf2-1f28-43a8-a6ac-72b684f4804c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.31">
+                    <om:Property Name="Ref" Value="BTS_Pen_Request.Schema_Request_Pen" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="22eb6972-940d-4bba-a2b3-d6fc33fb6541" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Send_Pen_Response" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="5738d512-8cfa-4af4-a519-faa5a895f9f6" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_Send" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="838c5202-697b-4ed6-b8fd-9bf0a968ee4f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.32">
+                    <om:Property Name="Ref" Value="BTS_Pen_Request.Schema_Response_Pen" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="33008fce-c41a-4af5-8bf9-7c22562963ce" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="60.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Orchestration_Request_Pen" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="b5c95b96-1b98-49ae-9198-d9ce16fecda0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="BTS_Pen_Request.Schema_Request_Pen" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_Request_Pen" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ddde4eec-fc7b-4329-8c2b-9c8b4235552b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="BTS_Pen_Request.Schema_Response_Pen" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_Response_Pen" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="d1c432a8-b614-49e3-8b06-1636fa6708a3" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="66704ac1-9806-4064-bd71-044cbde470c0" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_Receive_Pen_Request" />
+                    <om:Property Name="MessageName" Value="Message_Request_Pen" />
+                    <om:Property Name="OperationName" Value="Operation_Receive" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Request_Pen" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="b3c1b5b2-c4eb-46a5-a070-07689fa0a20d" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="58.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Decide_Quantity" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="4e1af305-94c9-4ae1-ba58-10797daf6c95" ParentLink="ReallyComplexStatement_Branch" LowerBound="32.13" HigherBound="45.1">
+                        <om:Property Name="Expression" Value="System.Int32.Parse(Message_Request_Pen(BTS_Pen_Request.Schema_Request_Pen_Property.Quantity))&gt;5&#xD;&#xA;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Rule_Reject" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="074e3ebe-86db-4bf1-bc1f-5fe200a74956" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="42.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct_Response_Rejected" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="2b69fb44-689d-424a-80d3-537b8ff7fa1e" ParentLink="ComplexStatement_Statement" LowerBound="37.1" HigherBound="39.1">
+                                <om:Property Name="ClassName" Value="BTS_Pen_Request.Map_Request_Response" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_Response_Rejected" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="209da39f-2c43-45c0-956b-d4cd4fe4c51f" ParentLink="Transform_InputMessagePartRef" LowerBound="38.94" HigherBound="38.113">
+                                    <om:Property Name="MessageRef" Value="Message_Request_Pen" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="9e65bf88-f68f-4909-b54f-1bc505659302" ParentLink="Transform_OutputMessagePartRef" LowerBound="38.32" HigherBound="38.52">
+                                    <om:Property Name="MessageRef" Value="Message_Response_Pen" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="4c9c8e75-84a1-4258-999c-e9f6535dc924" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="41.1">
+                                <om:Property Name="Expression" Value="Message_Response_Pen(BTS_Pen_Request.Schema_Response_Pen_Property.Status)= &quot;Rejected&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Assign_Status_Rejected" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="4f7d0009-84c4-46d5-8575-97d9e8271157" ParentLink="Construct_MessageRef" LowerBound="35.27" HigherBound="35.47">
+                                <om:Property Name="Ref" Value="Message_Response_Pen" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="42f812cd-b6dc-4ec1-acfb-1a50b3b99853" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
+                            <om:Property Name="PortName" Value="Port_Send_Pen_Response" />
+                            <om:Property Name="MessageName" Value="Message_Response_Pen" />
+                            <om:Property Name="OperationName" Value="Operation_Send" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Response_Rejected" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="d0586551-af11-48a7-b113-d11d8ccff1f9" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="c95ea561-09f1-49dd-9833-58c059632719" ParentLink="ComplexStatement_Statement" LowerBound="47.1" HigherBound="55.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct_Response_Approved" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="909f0485-5995-4baa-8cc7-dfa5b28e9359" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="52.1">
+                                <om:Property Name="ClassName" Value="BTS_Pen_Request.Map_Request_Response" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_Response_Approved" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="c7bf103f-827a-47b1-aa1f-dba4114635b9" ParentLink="Transform_InputMessagePartRef" LowerBound="51.94" HigherBound="51.113">
+                                    <om:Property Name="MessageRef" Value="Message_Request_Pen" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_3" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="ea86dbbd-0d6d-4c52-aeb5-cfacd2b98f56" ParentLink="Transform_OutputMessagePartRef" LowerBound="51.32" HigherBound="51.52">
+                                    <om:Property Name="MessageRef" Value="Message_Response_Pen" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_4" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="3eb89578-ec83-43be-9c28-6b22ee59897c" ParentLink="ComplexStatement_Statement" LowerBound="52.1" HigherBound="54.1">
+                                <om:Property Name="Expression" Value="Message_Response_Pen(BTS_Pen_Request.Schema_Response_Pen_Property.Status)= &quot;Approved&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Assign_Status_Approved" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="1775f946-110d-40b6-a671-9e52e9df28ab" ParentLink="Construct_MessageRef" LowerBound="48.27" HigherBound="48.47">
+                                <om:Property Name="Ref" Value="Message_Response_Pen" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="4a992411-3a42-4958-a9d1-ed433351df96" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="57.1">
+                            <om:Property Name="PortName" Value="Port_Send_Pen_Response" />
+                            <om:Property Name="MessageName" Value="Message_Response_Pen" />
+                            <om:Property Name="OperationName" Value="Operation_Send" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Response_Approved" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="07c86ba1-57f2-4ac4-b998-6ed48bc5ee68" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="2" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTS_Pen_Request.PortType_Receive_Pen_Request" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Receive_Pen_Request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="62c5dd81-c560-448f-bf26-263551a53298" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c7a392bf-b081-4691-b6f2-b1e0c596b67d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="23" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTS_Pen_Request.PortType_Send_Pen_Response" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Send_Pen_Response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="76450917-4071-4788-876f-43cdba67c809" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BTS_Pen_Request
+{
+    public porttype PortType_Receive_Pen_Request
+    {
+        oneway Operation_Receive
+        {
+            Schema_Request_Pen
+        };
+    };
+    public porttype PortType_Send_Pen_Response
+    {
+        oneway Operation_Send
+        {
+            Schema_Response_Pen
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service Orchestration_Request_Pen
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_Receive_Pen_Request Port_Receive_Pen_Request;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_Send_Pen_Response Port_Send_Pen_Response;
+        message Schema_Request_Pen Message_Request_Pen;
+        message Schema_Response_Pen Message_Response_Pen;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("66704ac1-9806-4064-bd71-044cbde470c0")]
+            activate receive (Port_Receive_Pen_Request.Operation_Receive, Message_Request_Pen);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b3c1b5b2-c4eb-46a5-a070-07689fa0a20d")]
+            if (System.Int32.Parse(Message_Request_Pen(BTS_Pen_Request.Schema_Request_Pen_Property.Quantity))>5)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("074e3ebe-86db-4bf1-bc1f-5fe200a74956")]
+                construct Message_Response_Pen
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("2b69fb44-689d-424a-80d3-537b8ff7fa1e")]
+                    transform (Message_Response_Pen) = BTS_Pen_Request.Map_Request_Response (Message_Request_Pen);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("4c9c8e75-84a1-4258-999c-e9f6535dc924")]
+                    Message_Response_Pen(BTS_Pen_Request.Schema_Response_Pen_Property.Status)= "Rejected";
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("42f812cd-b6dc-4ec1-acfb-1a50b3b99853")]
+                send (Port_Send_Pen_Response.Operation_Send, Message_Response_Pen);
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c95ea561-09f1-49dd-9833-58c059632719")]
+                construct Message_Response_Pen
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("909f0485-5995-4baa-8cc7-dfa5b28e9359")]
+                    transform (Message_Response_Pen) = BTS_Pen_Request.Map_Request_Response (Message_Request_Pen);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3eb89578-ec83-43be-9c28-6b22ee59897c")]
+                    Message_Response_Pen(BTS_Pen_Request.Schema_Response_Pen_Property.Status)= "Approved";
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4a992411-3a42-4958-a9d1-ed433351df96")]
+                send (Port_Send_Pen_Response.Operation_Send, Message_Response_Pen);
+            }
+        }
+    }
+}
+

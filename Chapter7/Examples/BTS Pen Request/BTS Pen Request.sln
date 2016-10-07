@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}") = "BTS Pen Request", "BTS Pen Request.btproj", "{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deployment = Deployment
+		Development = Development
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}.Deployment.ActiveCfg = Deployment|.NET
+		{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}.Deployment.Build.0 = Deployment|.NET
+		{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}.Deployment.Deploy.0 = Deployment|.NET
+		{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}.Development.ActiveCfg = Development|.NET
+		{E6816ECC-0EA5-4FD3-81D0-F9A74EDEF190}.Development.Build.0 = Development|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

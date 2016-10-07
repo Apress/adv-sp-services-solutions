@@ -1,0 +1,57 @@
+<Field ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu"
+DisplayName="URL" DisplayNameSrcField="URL"
+AuthoringInfo="(URL with edit menu)">
+    <FieldRefs>
+        <FieldRef Name="URL"/>
+    </FieldRefs>
+    <DisplayPattern>
+         <FieldSwitch>
+            <Expr><GetVar Name="FreeForm"/></Expr>
+            <Case Value="TRUE"><Field Name="URL"/></Case>
+            <Default>
+                <HTML><![CDATA[<table height="100%" cellspacing=0
+                class="ms-unselectedtitle" onmouseover="OnItem(this)"
+                CTXName="ctx]]></HTML>
+                <Counter Type="View"/><HTML>" ItemId="</HTML>
+                <Column Name="ID" HTMLEncode="TRUE"/>
+                <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                <Switch>
+                    <Expr><Column Name="URL"/></Expr>
+                    <Case Value="">
+                        <Column2 Name="URL" HTMLEncode="TRUE"/>
+                    </Case>
+                    <Default>
+                        <FieldSwitch>
+                        <Expr><FieldProperty Name="URL" Select="Format"/></Expr>
+                        <Case Value="Image">
+                            <HTML><![CDATA[<IMG onfocus="OnLink(this)"
+                            SRC="]]></HTML>
+                            <Column Name="URL" HTMLEncode="TRUE"/>
+                            <HTML>" ALT="</HTML>
+                            <Column2 Name="URL" HTMLEncode="TRUE"/>
+                            <HTML><![CDATA[">]]></HTML>
+                        </Case>
+                        <Default>
+                            <HTML><![CDATA[<A onfocus="OnLink(this)"
+                            HREF="]]></HTML>
+                            <Column Name="URL" HTMLEncode="TRUE"/>
+                            <HTML><![CDATA[">]]></HTML>
+                            <Switch>
+                            <Expr><Column2 Name="URL"/></Expr>
+                            <Case Value=""><Column Name="URL"
+                            HTMLEncode="TRUE"/></Case>
+                            <Default>
+                               <Column2 Name="URL" HTMLEncode="TRUE"/>
+                            </Default>
+                            </Switch>
+                            <HTML><![CDATA[</A>]]></HTML>
+                        </Default>
+                        </FieldSwitch>
+                    </Default>
+                </Switch>
+                <HTML><![CDATA[</td><td><IMG SRC="/_layouts/images/blank.gif"
+                width=13 height=13 alt=""></td></tr></table>]]></HTML>
+            </Default>
+        </FieldSwitch>
+        </DisplayPattern>
+</Field>

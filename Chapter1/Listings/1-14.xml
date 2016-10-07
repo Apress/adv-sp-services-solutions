@@ -1,0 +1,32 @@
+<View Name="Summary" DisplayName="Summary View" Type="HTML">
+
+    <ViewHeader>
+      <HTML><![CDATA[<TABLE><TR>]]></HTML>
+      <Fields>
+        <HTML><![CDATA[<TH>]]></HTML>
+        <Field/>
+        <HTML><![CDATA[</TH>]]></HTML>
+      </Fields>
+      <HTML><![CDATA[</TR>]]></HTML>
+    </ViewHeader>
+
+    <ViewBody>
+      <HTML><![CDATA[<TR>]]></HTML>
+        <Fields>
+          <HTML><![CDATA[<TD>]]></HTML>
+          <Field/>
+          <HTML><![CDATA[</TD>]]></HTML>
+        </Fields>
+      <HTML><![CDATA[</TR>]]></HTML>
+    </ViewBody>
+
+    <ViewFooter>
+      <HTML><![CDATA[</TABLE>]]></HTML>
+    </ViewFooter>
+
+    <ViewFields>
+      <FieldRef Name="Title"/>
+      <FieldRef Name="Size"/>
+    </ViewFields>
+
+</View>

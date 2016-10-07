@@ -1,0 +1,21 @@
+<List ...>
+   <Fields>
+      <Field ColName="tp_ID" ReadOnly="TRUE" Type="Counter" Name="ID"
+ DisplayName="ID" FromBaseType="TRUE" /><Field ColName="tp_Created"
+ Hidden="TRUE" ReadOnly="TRUE" Type="DateTime" Name="Created
+ DisplayName="Created Date" StorageTZ="TRUE" FromBaseType="TRUE" />
+.
+.
+.
+   <Fields>
+   <RegionalSettings>
+      <Language>1033</Language>
+      <Locale>1033</Locale>
+      <AdvanceHijri>0</AdvanceHijri>
+      <CalendarType>1</CalendarType>
+      <Time24>False</Time24>
+      <TimeZone>300</TimeZone>
+      <SortOrder>2070</SortOrder>
+      <Presence>True</Presence>
+   </RegionalSettings>
+</List>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.microsoft.com/sharepoint/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://schemas.microsoft.com/sharepoint/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/sharepoint/soap/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="WebUrlFromPageUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebUrlFromPageUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebUrlFromPageUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllSubWebCollection">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllSubWebCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllSubWebCollectionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListTemplates">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListTemplatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListTemplatesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebCollection">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebCollectionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="WebUrlFromPageUrlSoapIn">
+    <part name="parameters" element="s0:WebUrlFromPageUrl" />
+  </message>
+  <message name="WebUrlFromPageUrlSoapOut">
+    <part name="parameters" element="s0:WebUrlFromPageUrlResponse" />
+  </message>
+  <message name="GetAllSubWebCollectionSoapIn">
+    <part name="parameters" element="s0:GetAllSubWebCollection" />
+  </message>
+  <message name="GetAllSubWebCollectionSoapOut">
+    <part name="parameters" element="s0:GetAllSubWebCollectionResponse" />
+  </message>
+  <message name="GetListTemplatesSoapIn">
+    <part name="parameters" element="s0:GetListTemplates" />
+  </message>
+  <message name="GetListTemplatesSoapOut">
+    <part name="parameters" element="s0:GetListTemplatesResponse" />
+  </message>
+  <message name="GetWebSoapIn">
+    <part name="parameters" element="s0:GetWeb" />
+  </message>
+  <message name="GetWebSoapOut">
+    <part name="parameters" element="s0:GetWebResponse" />
+  </message>
+  <message name="GetWebCollectionSoapIn">
+    <part name="parameters" element="s0:GetWebCollection" />
+  </message>
+  <message name="GetWebCollectionSoapOut">
+    <part name="parameters" element="s0:GetWebCollectionResponse" />
+  </message>
+  <portType name="WebsSoap">
+    <operation name="WebUrlFromPageUrl">
+      <input message="s0:WebUrlFromPageUrlSoapIn" />
+      <output message="s0:WebUrlFromPageUrlSoapOut" />
+    </operation>
+    <operation name="GetAllSubWebCollection">
+      <input message="s0:GetAllSubWebCollectionSoapIn" />
+      <output message="s0:GetAllSubWebCollectionSoapOut" />
+    </operation>
+    <operation name="GetListTemplates">
+      <input message="s0:GetListTemplatesSoapIn" />
+      <output message="s0:GetListTemplatesSoapOut" />
+    </operation>
+    <operation name="GetWeb">
+      <input message="s0:GetWebSoapIn" />
+      <output message="s0:GetWebSoapOut" />
+    </operation>
+    <operation name="GetWebCollection">
+      <input message="s0:GetWebCollectionSoapIn" />
+      <output message="s0:GetWebCollectionSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WebsSoap" type="s0:WebsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="WebUrlFromPageUrl">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/WebUrlFromPageUrl" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllSubWebCollection">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetAllSubWebCollection" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetListTemplates">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetListTemplates" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetWeb">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetWeb" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetWebCollection">
+      <soap:operation soapAction="http://schemas.microsoft.com/sharepoint/soap/GetWebCollection" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Webs">
+    <port name="WebsSoap" binding="s0:WebsSoap">
+      <soap:address location="http://spsdevelopment/sites/test/_vti_bin/Webs.asmx" />
+    </port>
+  </service>
+</definitions>

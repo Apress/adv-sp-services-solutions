@@ -1,0 +1,104 @@
+﻿<VisualStudioProject>
+    <BIZTALK>
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon ReferencesPath = "" />
+                <Config
+                    Name = "Development"
+                    Register = "True"
+                    Redeploy = "False"
+                    ConfigurationDatabase = "BizTalkMgmtDb"
+                    Server = "SPSDEVELOPMENT"
+                />
+                <Config
+                    Name = "Deployment"
+                    Register = "True"
+                    Redeploy = "False"
+                    ConfigurationDatabase = "BizTalkMgmtDb"
+                    Server = "SPSDEVELOPMENT"
+                />
+            </Settings>
+        </Build>
+        <OtherProjectSettings
+            CopyProjectDestinationFolder = ""
+            CopyProjectUncPath = ""
+            CopyProjectOption = "0"
+            ProjectView = "ProjectFiles"
+            ProjectTrust = "0"
+        />
+        <Files>
+            <File
+                RelPath = "Map_Request_Response.btm"
+                TestMapTargetType = "0"
+                ValidateTestMapOutput = "True"
+                TestMapInputInstanceFilename = ""
+                ValidateTestMapInput = "True"
+                TestMapSourceType = "0"
+                PropertySchemaFileName = "PropertySchema.xsd"
+                EditorOutputInstanceFilename = ""
+                EditorInputInstanceFilename = ""
+                ValidateInstanceInputType = "0"
+                AutoRefreshSchema = "0"
+                GenerateInstanceOutputType = "0"
+            />
+            <File
+                RelPath = "Schema_Request_Pen.xsd"
+                TestMapTargetType = "0"
+                ValidateTestMapOutput = "True"
+                TestMapInputInstanceFilename = ""
+                ValidateTestMapInput = "True"
+                TestMapSourceType = "0"
+                PropertySchemaFileName = "Schema_Request_Pen_Property.xsd"
+                EditorOutputInstanceFilename = "C:\Documents and Settings\Administrator\Desktop\Contents\Chapter7\Examples\BTS Pen Request\Instance_Request.xml"
+                EditorInputInstanceFilename = "C:\Documents and Settings\Administrator\Desktop\Contents\Chapter7\Examples\BTS Pen Request\Instance_Request.xml"
+                ValidateInstanceInputType = "0"
+                AutoRefreshSchema = "0"
+                GenerateInstanceOutputType = "0"
+            />
+            <File
+                RelPath = "Schema_Request_Pen_Property.xsd"
+                TestMapTargetType = "0"
+                ValidateTestMapOutput = "True"
+                TestMapInputInstanceFilename = ""
+                ValidateTestMapInput = "True"
+                TestMapSourceType = "0"
+                PropertySchemaFileName = "PropertySchema.xsd"
+                EditorOutputInstanceFilename = ""
+                EditorInputInstanceFilename = ""
+                ValidateInstanceInputType = "0"
+                AutoRefreshSchema = "0"
+                GenerateInstanceOutputType = "0"
+            />
+            <File
+                RelPath = "Schema_Response_Pen.xsd"
+                TestMapTargetType = "0"
+                ValidateTestMapOutput = "True"
+                TestMapInputInstanceFilename = ""
+                ValidateTestMapInput = "True"
+                TestMapSourceType = "0"
+                PropertySchemaFileName = "Schema_Response_Pen_Property.xsd"
+                EditorOutputInstanceFilename = "C:\Documents and Settings\Administrator\Desktop\Contents\Chapter7\Examples\BTS Pen Request\Instance_Response.xml"
+                EditorInputInstanceFilename = "C:\Documents and Settings\Administrator\Desktop\Contents\Chapter7\Examples\BTS Pen Request\Instance_Response.xml"
+                ValidateInstanceInputType = "0"
+                AutoRefreshSchema = "0"
+                GenerateInstanceOutputType = "0"
+            />
+            <File
+                RelPath = "Schema_Response_Pen_Property.xsd"
+                TestMapTargetType = "0"
+                ValidateTestMapOutput = "True"
+                TestMapInputInstanceFilename = ""
+                ValidateTestMapInput = "True"
+                TestMapSourceType = "0"
+                PropertySchemaFileName = "PropertySchema.xsd"
+                EditorOutputInstanceFilename = ""
+                EditorInputInstanceFilename = ""
+                ValidateInstanceInputType = "0"
+                AutoRefreshSchema = "0"
+                GenerateInstanceOutputType = "0"
+            />
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

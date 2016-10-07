@@ -1,0 +1,11 @@
+<Module Name="WebPartPopulation" List="113" Url="_catalogs/wp"
+Path="lists\wplib\dwp" RootWebOnly="TRUE">
+    <File Url="MSContentEditor.dwp" Type="GhostableInLibrary"/>
+    <File Url="MSPageViewer.dwp" Type="GhostableInLibrary"/>
+    <File Url="MSImage.dwp" Type="GhostableInLibrary"/>
+    <File Url="MSMembers.dwp" Type="GhostableInLibrary"/>
+    <File Url="MSSimpleForm.dwp" Type="GhostableInLibrary"/>
+    <File Url="MSXml.dwp" Type="GhostableInLibrary"/>
+    <File Url="SPSIdentity.dwp" Type="GhostableInLibrary"/>
+    <File Url="SPSSubSites.dwp" Type="GhostableInLibrary"/>
+</Module>

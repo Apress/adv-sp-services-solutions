@@ -1,0 +1,23 @@
+<Default>
+    <HTML>GENERATE AN HTML TABLE OPEN</HTML>
+    <HTML>GENERATE A TABLE ROW OPEN</HTML>
+    <Switch>
+        <Expr>GET THE VALUE OF THE URL FIELD</Expr>
+        <Case IF THE FIELD IS EMPTY>
+            RENDER THE FIELD WITH NO SPECIAL PROCESSING
+        </Case>
+        <Default>
+            <FieldSwitch>
+            <Expr GET THE FORMAT OF THE URL FIELD></Expr>
+            <Case IF IT'S AN IMAGE VALUE>
+                <HTML>GENERATE AN IMAGE HYPERLINK</HTML>
+            </Case>
+            <Default IF IT'S NOT AN IMAGE>
+                <HTML>GENERATE A NORMAL HYPERLINK</HTML>
+            </Default>
+            </FieldSwitch>
+        </Default>
+    </Switch>
+    <HTML>GENERATE AN HTML TABLE ROW CLOSE</HTML>
+    <HTML>GENERATE AN HTML TABLE CLOSE</HTML>
+</Default>

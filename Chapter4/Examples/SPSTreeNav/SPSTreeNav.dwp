@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+    <Title>Tree Navigation</Title>
+    <Description>Collapsable Treeview Navigation control</Description>
+    <Assembly>SPSTreeNav</Assembly>
+    <TypeName>SPSTreeNav.Lister</TypeName>
+    <FrameType>None</FrameType>
+</WebPart>

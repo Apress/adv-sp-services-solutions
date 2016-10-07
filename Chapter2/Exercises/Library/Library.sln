@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "http://localhost:8080/Library/Library.csproj", "{0A56822E-E4B8-4C4C-8961-15CE5EAC00FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryClient", "LibraryClient\LibraryClient.csproj", "{ACA2981C-263A-49EA-9F11-42C90C28271D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0A56822E-E4B8-4C4C-8961-15CE5EAC00FA}.Debug.ActiveCfg = Debug|.NET
+		{0A56822E-E4B8-4C4C-8961-15CE5EAC00FA}.Debug.Build.0 = Debug|.NET
+		{0A56822E-E4B8-4C4C-8961-15CE5EAC00FA}.Release.ActiveCfg = Release|.NET
+		{0A56822E-E4B8-4C4C-8961-15CE5EAC00FA}.Release.Build.0 = Release|.NET
+		{ACA2981C-263A-49EA-9F11-42C90C28271D}.Debug.ActiveCfg = Debug|.NET
+		{ACA2981C-263A-49EA-9F11-42C90C28271D}.Debug.Build.0 = Debug|.NET
+		{ACA2981C-263A-49EA-9F11-42C90C28271D}.Release.ActiveCfg = Release|.NET
+		{ACA2981C-263A-49EA-9F11-42C90C28271D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

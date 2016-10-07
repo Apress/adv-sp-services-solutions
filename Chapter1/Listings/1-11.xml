@@ -1,0 +1,10 @@
+<AllUsersWebPart WebPartZoneID="Left" WebPartOrder="3">
+   <![CDATA[
+   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+        <Assembly>SPSSubSites, Version 1.0.0.0, Culture=neutral,
+PublicKeyToken=315a4c3e9164ed11</Assembly>
+        <TypeName>SPSSubSites.Lister</TypeName>
+        <Title>Sites Under this Site</Title>
+    </WebPart>
+    ]]>
+</AllUsersWebPart>

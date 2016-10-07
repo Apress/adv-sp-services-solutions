@@ -1,0 +1,19 @@
+<st1:reference data="&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;utf-16&quot;?&gt;&#xA;&lt;ContextInformation
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+MetadataScopeName=&quot;CRM&quot; EntityName=&quot;Company&quot;
+ViewName=&quot;CompanyInformation&quot; ReferenceSchemaName=&quot;
+Company (CustomerData)&quot; xmlns=&quot;http://schemas.microsoft.com/InformationBridge/2004/
+ContextInformation&quot;&gt;&#xA;  &lt;Reference&gt;&#xA;    &lt;
+CompanyName xmlns=&quot;CustomerData&quot;
+d2p1:MetadataScopeName=&quot;CRM&quot; d2p1:EntityName=&quot;Company&quot;
+d2p1:ViewName=&quot;CompanyInformation&quot;
+d2p1:ReferenceSchemaName=&quot;Company (CustomerData)&quot;
+xmlns:d2p1=&quot;http://schemas.microsoft.com/InformationBridge/2004&quot;
+&gt;&#xA&lt;Name&gt;ABC Printing Company&lt;/Name&gt;&#xA;
+&lt;/CompanyName&gt;&#xA;&lt;/Reference&gt;&#xA;&lt;/ContextInformation&gt;"
+title="ABC Printing Company" description="No Description was defined."
+w:st="on">
+<w:r><w:t>ABC Printing Company</w:t></w:r>
+</st1:reference>

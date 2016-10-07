@@ -1,0 +1,25 @@
+<HTML>
+<TITLE>My File Open Dialog</TITLE>
+<HEAD>
+<SCRIPT Language="JavaScript">
+  function showPath(){
+    try{
+      if(window.frames("MyDialog").selectedElement.fileattribute == "file")
+        alert(window.frames("MyDialog").selectedElement.id);
+      else
+        alert("Folder selected");
+    }
+    catch(x){
+      alert("Nothing selected!");
+    }
+    } </SCRIPT>
+</HEAD>
+<BODY>
+<IFRAME Name="MyDialog" ID="MyDialog" WIDTH="700px" HEIGHT="200px"
+    SRC="http://[ServerName]/[SitePath]/_vti_bin/owssvr.dll?dialogview=FileOpen&location=Shared%20Documents">
+</IFRAME>
+<FORM>
+<INPUT Type="Button" Value="Show File Path" OnClick="showPath();">
+</FORM>
+</BODY>
+</HTML>

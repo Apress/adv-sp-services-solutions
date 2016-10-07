@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- _lcid="1033" _version="11.0.5510" _dal="1" -->
+<!-- _LocalBinding -->
+<Project Title"My New template" ListDir="Lists" xmlns:ows="Microsoft SharePoint" CustomJSUrl="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/CustomTaskList.js">
+    <NavBars>
+        <NavBar Name="SharePoint Top Navbar" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Body="&lt;a ID='onettopnavbar#LABEL_ID#' href='#URL#' accesskey='J'&gt;#LABEL#&lt;/a&gt;" ID="1002">
+            
+            <NavBarLink Name="Documents and Lists" Url="_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/viewlsts.aspx">  </NavBarLink>
+            <NavBarLink Name="Create" Url="_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/create.aspx">  </NavBarLink>
+            <NavBarLink Name="Site Settings" Url="_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/settings.aspx">  </NavBarLink>
+            <NavBarLink Name="Help" Url='javascript:HelpWindowKey("NavBarHelpHome")'>  </NavBarLink>
+        </NavBar>
+        <NavBar Name="Documents" Prefix="&lt;table border=0 cellpadding=4 cellspacing=0&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border=0 cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/images/blank.gif' ID='100' alt='Icon' border=0&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign=top&gt;&lt;a ID=onetleftnavbar#LABEL_ID# href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1004">
+            
+        </NavBar>
+        <NavBar Name="Pictures" Prefix="&lt;table border=0 cellpadding=4 cellspacing=0&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border=0 cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/images/blank.gif' ID='100' alt='Icon' border=0&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign=top&gt;&lt;a ID=onetleftnavbar#LABEL_ID# href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1005">
+            
+        </NavBar>
+        <NavBar Name="Lists" Prefix="&lt;table border=0 cellpadding=4 cellspacing=0&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border=0 cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/images/blank.gif' ID='100' alt='Icon' border=0&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign=top&gt;&lt;a ID=onetleftnavbar#LABEL_ID# href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1003">
+            
+        </NavBar>
+        <NavBar Name="Discussions" Prefix="&lt;table border=0 cellpadding=4 cellspacing=0&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border=0 cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/images/blank.gif' ID='100' alt='Icon' border=0&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign=top&gt;&lt;a ID=onetleftnavbar#LABEL_ID# href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1006">
+            
+        </NavBar>
+        <NavBar Name="Surveys" Prefix="&lt;table border=0 cellpadding=4 cellspacing=0&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border=0 cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/images/blank.gif' ID='100' alt='Icon' border=0&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign=top&gt;&lt;a ID=onetleftnavbar#LABEL_ID# href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1007">
+            
+        </NavBar>
+    </NavBars>
+    <ListTemplates>
+        <ListTemplate Name="custlist" DisplayName="Custom List" Type="100" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a custom list when you want to specify your own columns. The list opens as a Web page and lets you add or edit items one at a time." Image="/_layouts/images/itgen.gif"></ListTemplate>
+        <ListTemplate Name="gridlist" DisplayName="Custom List in Datasheet View" Type="120" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a custom list when you want to specify your own columns. The list opens in a spreadsheet-like environment for convenient data entry, editing, and formatting. It requires a Windows SharePoint Services-compatible list datasheet control and ActiveX control support." Image="/_layouts/images/itdatash.gif"></ListTemplate>
+        <ListTemplate Name="doclib" DisplayName="Document Library" Type="101" BaseType="1" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a document library when you have a collection of documents or other files that you want to share. Document libraries support features such as sub-folders, file versioning, and check-in/check-out." Image="/_layouts/images/itdl.gif" DocumentTemplate="101"></ListTemplate>
+        <ListTemplate Name="imglib" DisplayName="Picture Library" Type="109" BaseType="1" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a picture library when you have pictures you want to share.  Picture libraries provide special features for managing and displaying pictures, such as thumbnails, download options, and a slide show." Image="/_layouts/images/itil.gif" DocumentTemplate="100"></ListTemplate>
+        <ListTemplate Name="voting" DisplayName="Survey" Type="102" BaseType="4" OnQuickLaunch="TRUE" SecurityBits="12" Description="Create a survey when you want to poll other Web site users. Surveys provide features that allow you to quickly create questions and define how users specify their answers." Image="/_layouts/images/itsurvey.gif"> </ListTemplate>
+        <ListTemplate Name="discuss" DisplayName="Discussion Board" Type="108" BaseType="3" OnQuickLaunch="TRUE" SecurityBits="12" Description="Create a discussion board when you want to provide a place for newsgroup-style discussions. Discussion boards provide features for managing discussion threads and ensuring that only approved posts appear." Image="/_layouts/images/itdisc.gif">            </ListTemplate>
+        <ListTemplate Name="favorite" DisplayName="Links" Type="103" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a links list when you have links to Web pages or other resources that you want to share." Image="/_layouts/images/itlink.gif">            </ListTemplate>
+        <ListTemplate Name="announce" DisplayName="Announcements" Type="104" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create an announcements list when you want a place to share news, status, and other short bits of information." Image="/_layouts/images/itann.gif">            </ListTemplate>
+        <ListTemplate Name="contacts" DisplayName="Contacts" Type="105" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a contacts list when you want to manage information about people that your team works with such as customers or partners. You can share information between your contacts list and Windows SharePoint Services-compatible contacts programs." Image="/_layouts/images/itcontct.gif">  </ListTemplate>
+        <ListTemplate Name="events" DisplayName="Events" Type="106" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create an events list when you want a calendar-based view of upcoming meetings, deadlines, and other important events. You can share information between your events list and Windows SharePoint Services-compatible events programs." Image="/_layouts/images/itevent.gif">            </ListTemplate>
+        <ListTemplate Name="tasks" DisplayName="Tasks" Type="107" BaseType="0" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create a tasks list when you want to track a group of work items that you or your team needs to complete." Image="/_layouts/images/ittask.gif"> </ListTemplate>
+        <ListTemplate Name="webtemp" DisplayName="Site Template Gallery" Type="111" BaseType="1" Hidden="TRUE" DontSaveInTemplate="TRUE" HiddenList="TRUE" Unique="TRUE" RootWebOnly="TRUE" Catalog="TRUE" OnQuickLaunch="FALSE" SecurityBits="11" Description="Store your custom site designs in the Site Template Gallery for future use." Image="/_layouts/images/itdl.gif" DocumentTemplate="100"></ListTemplate>
+        <ListTemplate Name="wplib" DisplayName="Web Part Gallery" Type="113" BaseType="1" Hidden="TRUE" HiddenList="TRUE" Unique="TRUE" RootWebOnly="TRUE" Catalog="TRUE" OnQuickLaunch="FALSE" SecurityBits="11" Description="Place to store Web Parts" Image="/_layouts/images/itdl.gif" DocumentTemplate="100"></ListTemplate>
+        <ListTemplate Name="datasrcs" DisplayName="DataSources" Type="110" BaseType="1" Hidden="TRUE" HiddenList="TRUE" OnQuickLaunch="FALSE" SecurityBits="11" Description="Data sources for this web." Image="/_layouts/images/itdl.gif" DocumentTemplate="100"></ListTemplate> 
+        <ListTemplate Name="listtemp" DisplayName="List Template Gallery" Type="114" BaseType="1" Hidden="TRUE" HiddenList="TRUE" Unique="TRUE" RootWebOnly="TRUE" Catalog="TRUE" OnQuickLaunch="FALSE" SecurityBits="11" Description="Make a template available for use in list creation by adding to this gallery. Default list templates are not shown." Image="/_layouts/images/itdl.gif" DocumentTemplate="100"></ListTemplate>
+        <ListTemplate Name="xmlform" DisplayName="Form Library" Type="115" BaseType="1" OnQuickLaunch="FALSE" SecurityBits="11" Description="Create a form library when you have XML-based business forms, such as status reports or purchase orders, that you want to manage. These libraries require a Windows SharePoint Services-compatible XML editor, such as Microsoft Office InfoPath." Image="/_layouts/images/itdl.gif" DocumentTemplate="1000"></ListTemplate>
+        <ListTemplate Name="issue" DisplayName="Issues" Type="1100" BaseType="5" DontSaveInTemplate="TRUE" OnQuickLaunch="TRUE" SecurityBits="11" Description="Create an issues list when you want to manage a set of issues or problems. You can assign, prioritize, and follow the progress of issues from start to finish." Image="/_layouts/images/itissue.gif"></ListTemplate>
+    </ListTemplates>
+    <DocumentTemplates>
+        <DocumentTemplate  Name="" DisplayName="None" Type="100" Default="FALSE" Description="This document library will not use templates.">
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Microsoft Office Word document" Type="101" Default="TRUE" Description="A blank Microsoft Office Word document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\word\wdtmpl.doc" TargetName="Forms/template.doc" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Microsoft Office FrontPage Web page" Type="102" Description="A blank Microsoft Office FrontPage HTML document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\fp\fptmpl.htm" TargetName="Forms/template.htm" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Microsoft Office Excel spreadsheet" Type="103" Description="A blank Microsoft Office Excel document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\xl\xltmpl.xls" TargetName="Forms/template.xls" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Microsoft Office PowerPoint presentation" Type="104" Description="A blank Microsoft Office PowerPoint document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\ppt\pptmpl.pot" TargetName="Forms/template.pot" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Basic page" Type="105" Description="A blank Microsoft basic page ASPX document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\blankpgs\_basicpage.htm" TargetName="Forms/_basicpage.htm" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate  DisplayName="Web Part Page" Type="106" Description="A blank Microsoft Web Part Page ASPX document.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\smartpgs\_webpartpage.htm" TargetName="Forms/_webpartpage.htm" Default="TRUE"/>
+            </DocumentTemplateFiles>
+        </DocumentTemplate>
+        <DocumentTemplate XMLForm="TRUE"  DisplayName="Blank Form" Type="1000" Default="TRUE" Description="Design this empty form to meet your specific needs.">
+            <DocumentTemplateFiles>
+                <DocumentTemplateFile Name="doctemp\xmlforms\blank\template.xml" TargetName="Forms/template.xml" Default="TRUE" />
+            </DocumentTemplateFiles>
+        </DocumentTemplate>             
+    </DocumentTemplates>
+    <BaseTypes>
+        <BaseType Title="Generic List" Image="_layouts/images/itgen.gif" Type="0">
+            <MetaData>
+                <Fields>
+                    <Field ColName="tp_ID" ReadOnly="TRUE" Type="Counter" Name="ID" PrimaryKey="TRUE" DisplayName="ID"></Field>
+                    <Field Type="Text" Name="Title" DisplayName="Title" Required="TRUE" ></Field>
+                    <Field ColName="tp_Modified" ReadOnly="TRUE" Type="DateTime" Name="Modified" DisplayName="Modified" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Created" ReadOnly="TRUE" Type="DateTime" Name="Created" DisplayName="Created" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Author" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Author" DisplayName="Created By" ></Field>
+                    <Field ColName="tp_Editor" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Editor" DisplayName="Modified By" ></Field>
+                    <Field ColName="tp_Version" Hidden="TRUE" ReadOnly="TRUE" Type="Integer" SetAs="owshiddenversion" Name="owshiddenversion" DisplayName="owshiddenversion"></Field>
+                    <Field ColName="tp_HasAttachment" Type="Attachments" Name="Attachments" DisplayName="Attachments"></Field>
+                    <Field ColName="tp_ModerationStatus" ReadOnly="TRUE" Type="ModStat" Name="_ModerationStatus" DisplayName="Approval Status" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE">
+                        <CHOICES>
+                            <CHOICE>0;#Approved</CHOICE>
+                            <CHOICE>1;#Rejected</CHOICE>
+                            <CHOICE>2;#Pending</CHOICE>
+                        </CHOICES>
+                        <Default>0</Default>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Note" Name="_ModerationComments" DisplayName="Approver Comments" Hidden="TRUE" CanToggleHidden="TRUE" Sortable="FALSE"></Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="Edit" Sortable="FALSE" Filterable="FALSE" DisplayName="Edit" AuthoringInfo="(link to edit item)" >
+                        <DisplayPattern>
+							<HTML><![CDATA[<a href="]]></HTML><URL Cmd="Edit"/>
+							<HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <HTML><![CDATA[<img border="0" alt="]]></HTML><HTML>Edit</HTML><HTML><![CDATA[" src="/_layouts/images/edititem.gif">]]></HTML>
+							<HTML><![CDATA[</a>]]></HTML>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Title" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" >
+                        <FieldRefs>
+                            <FieldRef Name="Title"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+							<HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML><URL/>
+							<HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <Column HTMLEncode='TRUE' Name='Title' Default='(no title)'></Column>
+							<HTML><![CDATA[</a>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </DisplayPattern>
+                        <DisplayBidiPattern>
+							<HTML><![CDATA[<p dir=]]></HTML><Property Select="Direction"/><HTML><![CDATA[><a onfocus="OnLink(this)" href="]]></HTML><URL/>
+							<HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <Column HTMLEncode='TRUE' Name='Title' Default='(no title)'></Column>
+							<HTML><![CDATA[</a>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                                                        <HTML><![CDATA[</p>]]></HTML>
+                        </DisplayBidiPattern>                         
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Title" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" >
+                        <FieldRefs>
+                            <FieldRef Name="Title"/>
+                            <FieldRef Name="ID"/>
+                            <FieldRef Name="LinkTitleNoMenu"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"><Field Name="LinkTitleNoMenu"/></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                    <Field Name="LinkTitleNoMenu"/>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                         </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="SelectTitle" Hidden="TRUE" CanToggleHidden="TRUE" DisplayName="Select" Dir="" AuthoringInfo="(web part connection)" HeaderImage="blank.gif" Sortable="FALSE" >
+                        <FieldRefs>
+                            <FieldRef Name="ID"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><GetVar Name="SelectedID"/></Expr1>
+                                <Expr2><Column Name="ID"/></Expr2>
+                                <Then>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbsel.gif" alt="]]></HTML>
+                                    <HTML>Selected</HTML><HTML><![CDATA[">]]></HTML>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<a href="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" onclick="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" target="_self">]]></HTML>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbunsel.gif"  alt="]]></HTML>
+                                    <HTML>Normal</HTML><HTML><![CDATA[">]]></HTML>
+                                    <HTML><![CDATA[</a>]]></HTML>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field Name="InstanceID" DisplayName="InstanceID" ColName="tp_InstanceID" ReadOnly="TRUE" Hidden="TRUE" 
+                           Type="Integer" Min="0" Max="99991231" Filterable="TRUE" Sortable="TRUE">
+                    </Field>
+                    <Field ColName="tp_ItemOrder" Name="Order" DisplayName="Order" Type="Number" Hidden="TRUE"></Field>
+                    <Field ColName="tp_GUID" ReadOnly="TRUE" Hidden="TRUE" Type="Guid" Name="GUID" DisplayName="GUID"></Field>
+                </Fields>
+                <Default>
+                    <Forms>
+                        <Form Type="" Url="" />
+                    </Forms>
+                </Default>
+            </MetaData>
+        </BaseType>
+        <BaseType Title="Document Library" Image="_layouts/images/itdl.gif" Type="1">
+            <MetaData>
+                <Fields>
+                    <Field ColName="tp_ID" ReadOnly="TRUE" Type="Counter" Name="ID" DisplayName="ID"></Field>
+                    <Field ColName="tp_Created" Hidden="TRUE" ReadOnly="TRUE" Type="DateTime" Name="Created" DisplayName="Created Date" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Author" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Author" DisplayName="Created By" ></Field>
+                    <Field ColName="tp_Modified" Hidden="TRUE" ReadOnly="TRUE" Type="DateTime" Name="Modified" DisplayName="Last Modified" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Editor" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Editor" DisplayName="Modified By" ></Field>
+                    <Field ColName="tp_ModerationStatus" ReadOnly="TRUE" Type="ModStat" Name="_ModerationStatus" DisplayName="Approval Status" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE">
+                        <CHOICES>
+                            <CHOICE>0;#Approved</CHOICE>
+                            <CHOICE>1;#Rejected</CHOICE>
+                            <CHOICE>2;#Pending</CHOICE>
+                        </CHOICES>
+                        <Default>0</Default>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Note" Name="_ModerationComments" DisplayName="Approver Comments" Hidden="TRUE" CanToggleHidden="TRUE" Sortable="FALSE"></Field>
+                    <Field Name="FileRef" ReadOnly="TRUE" Hidden="TRUE" Type="Lookup" DisplayName="URL Path" List="Docs" FieldRef="ID" ShowField="FullUrl" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="FileDirRef" ReadOnly="TRUE" Hidden="TRUE" Type="Lookup" DisplayName="URL Dir Name" List="Docs" FieldRef="ID" ShowField="DirName" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="Last_x0020_Modified" ReadOnly="TRUE" DisplayName="Modified" Type="Lookup" List="Docs" FieldRef="ID" ShowField="TimeLastModified" Format="TRUE" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="Created_x0020_Date"  ReadOnly="TRUE" DisplayName="Created" Type="Lookup" List="Docs" FieldRef="ID" ShowField="TimeCreated" Format="TRUE" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="File_x0020_Size" Hidden="TRUE" ReadOnly="TRUE" Type="Lookup" DisplayName="File Size" List="Docs" FieldRef="ID" ShowField="SizeInKB" Format="TRUE" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="FSObjType" ReadOnly="TRUE" Hidden="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="File System Object Type" List="Docs" FieldRef="ID" ShowField="FSType" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="CheckedOutUserId" ReadOnly="TRUE" Hidden="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="ID of the User who has the item Checked Out" List="Docs" FieldRef="ID" ShowField="CheckoutUserId" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field ShowInFileDlg="FALSE" Type="File" Name="FileLeafRef" DisplayName="Name" AuthoringInfo="(for use in forms)" List="Docs" FieldRef="ID" ShowField="LeafName" JoinColName="DoclibRowId" JoinType="INNER" Required="TRUE"></Field>
+                    <Field Name="VirusStatus" Hidden="TRUE" ReadOnly="TRUE" Type="Lookup" DisplayName="Virus Status" List="Docs" FieldRef="ID" ShowField="Size" Format="TRUE" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field Name="CheckedOutTitle" Hidden="TRUE" ReadOnly="TRUE" Type="Lookup" DisplayName="Checked Out To" List="Docs" FieldRef="ID" ShowField="CheckedOutTitle" Format="TRUE" JoinColName="DoclibRowId" JoinType="INNER"></Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkCheckedOutTitle" DisplayName="Checked Out To" Filterable="TRUE" AuthoringInfo="(link to username to user details page)">
+                       <FieldRefs>
+                          <FieldRef Name="CheckedOutTitle"/>
+                          <FieldRef Name="CheckedOutUserId"/>
+                       </FieldRefs>
+                       <DisplayPattern>
+                          <IfEqual>
+                             <Expr1><Field Name="CheckedOutUserId"/></Expr1>
+                             <Expr2></Expr2>
+                             <Then/>
+                             <Else>
+                                  <HTML><![CDATA[<a href="]]></HTML><HttpVDir/><HTML><![CDATA[/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/UserDisp.aspx?ID=]]></HTML><Field Name="CheckedOutUserId"/><HTML><![CDATA[">]]></HTML>
+                                  <Field HTMLEncode="TRUE" Name="CheckedOutTitle"/>
+                                  <HTML><![CDATA[</a>]]></HTML>
+                             </Else>
+                          </IfEqual>
+                       </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Text" Name="Modified_x0020_By" DisplayName="Document Modified By" ></Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Text" Name="Created_x0020_By" DisplayName="Document Created By" ></Field>
+                    <Field ColName="tp_Version" Hidden="TRUE" ReadOnly="TRUE" Type="Integer" SetAs="owshiddenversion" Name="owshiddenversion" DisplayName="owshiddenversion"></Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Text" Name="File_x0020_Type" DisplayName="File Type"></Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Text" Name="HTML_x0020_File_x0020_Type" DisplayName="HTML File Type"></Field>
+                    <Field Name="_SourceUrl" Hidden="TRUE" ShowInFileDlg="FALSE" Type="Text" DisplayName="Source Url" ></Field>
+                    <Field Name="_SharedFileIndex" Hidden="TRUE" ShowInFileDlg="FALSE" Type="Text" DisplayName="Shared File Index" ></Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkFilenameNoMenu" DisplayName="Name" DisplayNameSrcField="FileLeafRef" Filterable="FALSE" AuthoringInfo="(linked to document)" >
+                        <FieldRefs>
+                            <FieldRef Name="FileLeafRef"/>
+                            <FieldRef Name="FSObjType"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><LookupColumn Name="FSObjType"/></Expr1>
+                                <Expr2>1</Expr2>
+                                <Then>
+                      			<Switch><Expr><GetVar Name="RecursiveView"/></Expr>
+                      			<Case Value="1">
+                                    <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE"/>
+                      			</Case>
+                      			<Default>
+									<HTML><![CDATA[<A onfocus="OnLink(this)"  HREF="javascript:SubmitFormPost()" onclick='javascript:ClearSearchTerm("]]></HTML><GetVar Name="View"/><HTML><![CDATA[");javascript:SubmitFormPost("]]></HTML>
+                                    <SetVar Name="RootFolder"><HTML>/</HTML><LookupColumn Name="FileRef"/></SetVar>
+                                    <ScriptQuote NotAddingQuote="TRUE"><FilterLink Default="" Paged="FALSE"/></ScriptQuote>
+                                    <HTML><![CDATA[");javascript:return false;'>]]></HTML>
+                                    <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE"/>
+                                    <HTML><![CDATA[</A>]]></HTML>
+                      			</Default>
+                      			</Switch>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<A onfocus="OnLink(this)" HREF="]]></HTML>
+                                    <Field Name="EncodedAbsUrl"/>
+                                    <HTML><![CDATA[" onclick="DispDocItemEx(this,']]></HTML>
+                                    <ServerProperty Select="HtmlTransform"/>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrAcceptType"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrHandleUrl"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrProgId"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[')">]]></HTML>
+                                        <UrlBaseName HTMLEncode="TRUE"><LookupColumn Name="FileLeafRef"/></UrlBaseName>
+                                        <HTML><![CDATA[</A>]]></HTML>
+                                    <IfNew Name="Created_x0020_Date">
+                                        <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                        <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                                    </IfNew>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkFilename" DisplayName="Name" DisplayNameSrcField="FileLeafRef" Filterable="FALSE" ClassInfo="Menu" AuthoringInfo="(linked to document with edit menu)" >
+                        <FieldRefs>
+                            <FieldRef Name="FileLeafRef"/>
+                            <FieldRef Name="FileDirRef"/>
+                            <FieldRef Name="FSObjType"/>
+                            <FieldRef Name="ID"/>
+                            <FieldRef Name="ServerUrl"/>
+                            <FieldRef Name="HTML_x0020_File_x0020_Type"/>
+                            <FieldRef Name="File_x0020_Type"/>
+                            <FieldRef Name="LinkFilenameNoMenu"/>
+                            <FieldRef Name="CheckedOutUserId"/>
+                            <FieldRef Name="_SourceUrl" />
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"><Field Name="LinkFilenameNoMenu"/></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML>" ServerUrl="</HTML>
+                                    <Field Name="ServerUrl" URLEncodeAsURL="TRUE"/>
+                                    <HTML>" FileDirRef="</HTML>
+                                    <Field Name="FileDirRef" HTMLEncode="TRUE"/>
+                                    <HTML>" HTMLType="</HTML>
+                                    <Column Name="HTML_x0020_File_x0020_Type"/>
+                                    <HTML>" FileType="</HTML>
+                                    <Column Name="File_x0020_Type"/>
+                                    <HTML>" DocIcon="</HTML>
+                                    <MapToAll><Column Name="HTML_x0020_File_x0020_Type"/><HTML>|</HTML><Column Name="File_x0020_Type"/></MapToAll>
+                                    <HTML>" FSObjType="</HTML>
+                                    <LookupColumn Name="FSObjType"/>
+                                    <HTML>" COUId="</HTML>
+                                    <Field Name="CheckedOutUserId"/>
+                                    <HTML>" SourceUrl="</HTML>
+                                    <Column Name="_SourceUrl" URLEncode="TRUE"/>
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                        <Field Name="LinkFilenameNoMenu"/>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="SelectTitle" Hidden="TRUE" CanToggleHidden="TRUE" DisplayName="Select" Dir="" AuthoringInfo="(web part connection)" HeaderImage="blank.gif" Sortable="FALSE" >
+                        <FieldRefs>
+                            <FieldRef Name="ID"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><GetVar Name="SelectedID"/></Expr1>
+                                <Expr2><Column Name="ID"/></Expr2>
+                                <Then>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbsel.gif" alt="]]></HTML>
+                                    <HTML>Selected</HTML><HTML><![CDATA[">]]></HTML>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<a href="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" onclick="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" target="_self">]]></HTML>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbunsel.gif"  alt="]]></HTML>
+                                    <HTML>Normal</HTML><HTML><![CDATA[">]]></HTML>
+                                    <HTML><![CDATA[</a>]]></HTML>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="SelectFilename" DisplayName="Select" Hidden="TRUE" CanToggleHidden="TRUE" Filterable="FALSE" AuthoringInfo="(web part connection)" HeaderImage="blank.gif" Sortable="FALSE" >
+                        <FieldRefs>
+                            <FieldRef Name="ID"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><GetVar Name="SelectedID"/></Expr1>
+                                <Expr2><Column Name="ID"/></Expr2>
+                                <Then>
+                                    <HTML><![CDATA[<img align="absmiddle" style="cursor: hand" src="/_layouts/images/rbsel.gif" alt="]]></HTML>
+                                    <HTML>Selected</HTML><HTML><![CDATA[">]]></HTML>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<a href="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" onclick="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" target="_self">]]></HTML>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbunsel.gif"  alt="]]></HTML>
+                                    <HTML>Normal</HTML><HTML><![CDATA[">]]></HTML>
+                                    <HTML><![CDATA[</a>]]></HTML>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="Edit" Sortable="FALSE" Filterable="FALSE" DisplayName="Edit" AuthoringInfo="(link to edit item)" >
+                        <DisplayPattern>
+							<HTML><![CDATA[<a href="]]></HTML><URL Cmd="Edit"/>
+							<HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <HTML><![CDATA[<img border="0" alt="]]></HTML><HTML>Edit Document Properties</HTML><HTML><![CDATA[" src="/_layouts/images/edititem.gif">]]></HTML>
+							<HTML><![CDATA[</a>]]></HTML>
+                        </DisplayPattern>
+                    </Field>
+                    <Field Type="Computed" ReadOnly="TRUE" Name="DocIcon" DisplayName="Type" TextOnly="TRUE" ClassInfo="Icon" AuthoringInfo="(icon linked to document)" > 
+                        <FieldRefs>
+                            <FieldRef Name="File_x0020_Type"/>
+                            <FieldRef Name="FSObjType"/>
+                            <FieldRef Name="FileRef"/>
+                            <FieldRef Name="HTML_x0020_File_x0020_Type"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><LookupColumn Name="FSObjType"/></Expr1>
+                                <Expr2>1</Expr2>
+                                <Then>
+                                  <Switch><Expr><GetVar Name="RecursiveView"/></Expr>
+                                  <Case Value="1">
+                                    <HTML><![CDATA[<IMG BORDER=0 ALT="]]></HTML>
+                                    <HTML>Icon</HTML>
+                                    <HTML><![CDATA[" SRC="/_layouts/images/folder.gif">]]></HTML>                            			</Case>
+                                  <Default>
+                                    <HTML><![CDATA[<A TABINDEX=-1 HREF="]]></HTML>
+                                    <SetVar Name="RootFolder"><HTML>/</HTML><LookupColumn Name="FileRef"/></SetVar>
+                                    <HTML><![CDATA[javascript:SubmitFormPost()" onclick="javascript:ClearSearchTerm(']]></HTML><GetVar Name="View"/><HTML><![CDATA[');javascript:SubmitFormPost(']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><FilterLink Default="" Paged="FALSE"/></ScriptQuote>
+                                    <HTML><![CDATA[');javascript:return false;]]></HTML>
+                                    <HTML><![CDATA["><IMG BORDER=0 ALT="]]></HTML>
+                                    <HTML>Icon</HTML>
+                                    <HTML><![CDATA[" SRC="/_layouts/images/folder.gif"></A>]]></HTML>
+                                  </Default>
+                                  </Switch>
+                                </Then>
+                                <Else>                                    	
+                                    <HTML><![CDATA[<A TABINDEX=-1 HREF="]]></HTML>
+                                    <Field Name="ServerUrl" URLEncodeAsURL="TRUE"/>
+                                    <HTML><![CDATA[" onclick="DispDocItemEx(this,']]></HTML>
+                                    <ServerProperty Select="HtmlTransform"/>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrAcceptType"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrHandleUrl"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrProgId"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[')">]]></HTML>
+                                    <HTML><![CDATA[<IMG BORDER=0 ALT="]]></HTML>
+                                    <HTML>Icon</HTML>
+                                    <HTML><![CDATA[" SRC="/_layouts/images/]]></HTML><MapToIcon><Column Name="HTML_x0020_File_x0020_Type"/><HTML>|</HTML><Column Name="File_x0020_Type"/></MapToIcon><HTML><![CDATA["></A>]]></HTML>
+                                </Else>
+                            </IfEqual>                
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Computed" Name="ServerUrl" DisplayName="Server Relative URL" Filterable="FALSE" RenderXMLUsingPattern="TRUE">
+                        <FieldRefs>
+                            <FieldRef Name="FileRef"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <HTML>/</HTML><LookupColumn Name="FileRef"/>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Computed" Name="EncodedAbsUrl" DisplayName="Encoded Absolute URL" Filterable="FALSE" RenderXMLUsingPattern="TRUE">
+                        <FieldRefs>
+                            <FieldRef Name="FileRef"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <HttpHost URLEncodeAsURL="TRUE"/><HTML>/</HTML><LookupColumn Name="FileRef" URLEncodeAsURL="TRUE"/>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Hidden="TRUE" Type="Computed" Name="BaseName" DisplayName="Name" Filterable="FALSE" RenderXMLUsingPattern="TRUE">
+                        <FieldRefs>
+                            <FieldRef Name="FileLeafRef"/>
+                            <FieldRef Name="FSObjType"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><LookupColumn Name="FSObjType"/></Expr1>
+                                <Expr2>1</Expr2>
+                                <Then>
+                                    <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE"/>
+                                </Then>
+                                <Else>
+                                    <UrlBaseName HTMLEncode="TRUE"><LookupColumn Name="FileLeafRef"/></UrlBaseName>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field Type="Computed" ReadOnly="TRUE" Name="FileSizeDisplay" DisplayName="File Size" AuthoringInfo="">
+                        <FieldRefs>
+                            <FieldRef Name="File_x0020_Size"/>
+                            <FieldRef Name="FSObjType"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <Switch><Expr><LookupColumn Name="FSObjType"/></Expr>
+                            <Case Value="0">
+                                <LookupColumn Name="File_x0020_Size"/><HTML> KB</HTML>
+                            </Case>
+                            </Switch>
+                        </DisplayPattern>
+                    </Field>              
+                    <Field Name="InstanceID" DisplayName="InstanceID" ColName="tp_InstanceID" ReadOnly="TRUE" Hidden="TRUE" 
+                           Type="Integer" Min="0" Max="99991231" Filterable="TRUE" Sortable="TRUE">
+                    </Field>
+                    <Field ColName="tp_ItemOrder" Name="Order" DisplayName="Order" Type="Number" Hidden="TRUE"></Field>
+                </Fields>
+                <Default>
+                    <Forms>
+                        <Form Type="" Url="" />
+                    </Forms>
+                </Default>
+            </MetaData>
+        </BaseType>
+        <BaseType Title="Discussion Forum" Image="_layouts/images/itdisc.gif" Type="3">
+        <MetaData>
+            <Fields>
+            <Field ColName="tp_ID" Type="Counter" Name="ID" ReadOnly="TRUE" PrimaryKey="TRUE" DisplayName="ID"></Field>
+            <Field Type="Text" Name="Title" DisplayName="Subject" Required="TRUE" ></Field>
+            <Field ColName="tp_Modified" ReadOnly="TRUE" Type="DateTime" Name="Modified" DisplayName="Modified" StorageTZ="TRUE"></Field>
+            <Field ColName="tp_Created" ReadOnly="TRUE" Type="DateTime" Name="Created" DisplayName="Posted At" StorageTZ="TRUE"></Field>
+            <Field ColName="tp_Author" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Author" DisplayName="Posted By" ></Field>
+            <Field ColName="tp_Editor" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Editor" DisplayName="Modified By" ></Field>
+            <Field ColName="tp_Version" Hidden="TRUE" ReadOnly="TRUE" SetAs="owshiddenversion" Type="Integer" Name="owshiddenversion" DisplayName="owshiddenversion"></Field>
+            <Field ColName="tp_Ordering" Hidden="TRUE" Name="Ordering" Type="Threading" DisplayName="Ordering"></Field>
+            <Field ColName="tp_GUID" ReadOnly="TRUE" Hidden="TRUE" Type="Guid" Name="GUID" DisplayName="GUID"></Field>
+            <Field ColName="tp_HasAttachment" Type="Attachments" Name="Attachments" DisplayName="Attachments"></Field>
+            <Field ColName="tp_ModerationStatus" ReadOnly="TRUE" Type="ModStat" Name="_ModerationStatus" DisplayName="Approval Status" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE">
+                <CHOICES>
+                    <CHOICE>0;#Approved</CHOICE>
+                    <CHOICE>1;#Rejected</CHOICE>
+                    <CHOICE>2;#Pending</CHOICE>
+                </CHOICES>
+                <Default>0</Default>
+            </Field>
+            <Field ReadOnly="TRUE" Type="Note" Name="_ModerationComments" DisplayName="Approver Comments" Hidden="TRUE" CanToggleHidden="TRUE" Sortable="FALSE"></Field>
+            <Field Name="ThreadID" Hidden="TRUE" Type="Guid" DisplayName="Thread ID"></Field>
+            <Field ReadOnly="TRUE" Type="Computed" Name="Threading" Hidden="TRUE" DisplayName="Subject" DisplayNameSrcField="Title" AuthoringInfo="(threaded)" >
+               <FieldRefs>
+                    <FieldRef Name="Title"/>
+                    <FieldRef Name="ID"/>
+                    <FieldRef Name="Ordering"/>
+                    <FieldRef Name="ThreadID"/>
+                    <FieldRef Name="Body"/>
+                    <FieldRef Name="GUID"/>
+                </FieldRefs>
+                <DisplayPattern>
+                    <HTML><![CDATA[<table border=0 cellpadding=0 cellspacing=0  width="100%"><tr><td class="ms-vb" name="indent" width="0"]]></HTML>
+                    <HTML><![CDATA[></td><td class="ms-vb">
+                    <table PostID="]]></HTML><Column Name="GUID" HTMLEncode="TRUE"/><HTML><![CDATA[" border=0 cellpadding=0 cellspacing=0 width="100%"><tr>
+                    <td class="ms-vb" style="padding-top: 1px;">
+                    <a name="post" style="cursor: default" tabindex="2">]]></HTML>
+                    <HTML><![CDATA[<img name="widget" id="]]></HTML>
+                    <Column Name="Ordering" HTMLEncode="TRUE"/>                    
+                    <HTML><![CDATA[" border="0" src="/_layouts/images/discbul.gif"></a>&nbsp;</td><td class="ms-vb" width="100%">]]></HTML>
+                    <IfEqual>
+                        <Expr1><GetVar Name="SelectedID"/></Expr1>
+                        <Expr2><Field Name="ID"/></Expr2>
+                        <Then>
+                            <HTML><![CDATA[<b>]]></HTML>
+                            <Column HTMLEncode="TRUE" Name="Title"/>
+                            <HTML><![CDATA[</b>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </Then>
+                        <Else>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML>" Ordering="</HTML>
+                                    <Column Name="Ordering" HTMLEncode="TRUE"/>
+                                    <HTML>" ThreadID="</HTML>
+                                    <Column Name="ThreadID" HTMLEncode="TRUE"/>
+                                    <HTML>" Subject="</HTML>
+                                    <Column Name="Title" StripWS="TRUE" HTMLEncode="TRUE"/>           	
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        	            <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                        	            <URL />
+                        	            <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                        	            <Column HTMLEncode='TRUE' Name='Title' Default='(no subject)'/>
+                        	            <HTML><![CDATA[</a>]]></HTML>
+                                        <IfNew>
+                                            <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>                                
+                                            <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                                        </IfNew>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        </Else>
+                    </IfEqual>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>
+                    <HTML><![CDATA[<table name="body"]]></HTML>
+                    <HTML><![CDATA[ STYLE="display:" width=100%><tr><td class="ms-vb" width=5>&nbsp;</td><td class="ms-vb">]]></HTML>
+                    <Switch>
+                    <Expr><Column Name="Body"/></Expr>
+                    <Case Value=""><HTML>(no text)</HTML></Case>
+                    <Default>
+                        <Switch>
+                            <Expr><FieldProperty Name="Body" Select="RichText"/></Expr>
+                            <Case Value="TRUE">
+                                <HTML><![CDATA[<div>]]></HTML><Limit Len="400" MoreText="..." AutoHyperLinkNoEncoding="TRUE"><Column Name="Body"/></Limit><HTML><![CDATA[</div>]]></HTML>
+                            </Case>
+                            <Default>
+                                <Limit Len="400" MoreText="..." AutoHyperLink="TRUE" AutoNewLine="TRUE"><Column Name="Body"/></Limit>
+                            </Default>
+                        </Switch>
+                    </Default>
+                    </Switch>
+                    <HTML><![CDATA[</td></tr></table></td></tr></table>]]></HTML>                    
+                </DisplayPattern>
+                <DisplayBidiPattern>
+                    <HTML><![CDATA[<table border=0 cellpadding=0 cellspacing=0 width="100%"><tr><td name="indent" width="0"]]></HTML>
+                    <HTML><![CDATA["></td><td class="ms-vb">
+                    <table PostID="]]></HTML><Column Name="GUID" HTMLEncode="TRUE"/><HTML><![CDATA[" border=0 cellpadding=0 cellspacing=0 width="100%"><tr>
+                    <td class="ms-vb" style="padding-top: 1px;">
+                    <a name="post"  style="cursor: default" tabindex="2">]]></HTML>
+                    <HTML><![CDATA[<img name="widget" id="]]></HTML>
+                    <Column Name="Ordering" HTMLEncode="TRUE"/>                    
+                    <HTML><![CDATA[" border="0" src="/_layouts/images/discbul.gif"></a>&nbsp;</td><td class="ms-vb" width="100%">]]></HTML>
+                    <IfEqual>
+                        <Expr1><GetVar Name="SelectedID"/></Expr1>
+                        <Expr2><Field Name="ID"/></Expr2>
+                        <Then>
+                            <HTML><![CDATA[<b>]]></HTML>
+                            <Column HTMLEncode="TRUE" Name="Title"/>
+                            <HTML><![CDATA[</b>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </Then>
+                        <Else>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML>" Ordering="</HTML>
+                                    <Column Name="Ordering" HTMLEncode="TRUE"/>
+                                    <HTML>" ThreadID="</HTML>
+                                    <Column Name="ThreadID" HTMLEncode="TRUE"/>
+                                    <HTML>" Subject="</HTML>
+                                    <Column Name="Title" StripWS="TRUE" HTMLEncode="TRUE"/>           	
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        	            <HTML><![CDATA[<p dir=]]></HTML><Property Select="Direction"/><HTML><![CDATA[><a onfocus="OnLink(this)" href="]]></HTML>
+                        	            <URL />
+                        	            <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                        	            <Column HTMLEncode='TRUE' Name='Title' Default='(no subject)'/>
+                        	            <HTML><![CDATA[</a>]]></HTML>
+                                        <IfNew>
+                                            <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>                                
+                                            <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                                        </IfNew>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                            <HTML><![CDATA[</p>]]></HTML>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        </Else>
+                    </IfEqual>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>
+                    <HTML><![CDATA[<table name="body"]]></HTML>
+                    <HTML><![CDATA[ STYLE="display:" width=100%><tr><td width=8>&nbsp;</td><td class="ms-vb">]]></HTML>
+                    <Switch>
+                    <Expr><Column Name="Body"/></Expr>
+                    <Case Value=""><HTML>(no text)</HTML></Case>
+                    <Default>
+                        <Switch>
+                            <Expr><FieldProperty Name="Body" Select="RichText"/></Expr>
+                            <Case Value="TRUE">
+                                <HTML><![CDATA[<div>]]></HTML><Limit Len="400" MoreText="..." AutoHyperLinkNoEncoding="TRUE"><Column Name="Body"/></Limit><HTML><![CDATA[</div>]]></HTML>
+                            </Case>
+                            <Default>
+                                <Limit Len="400" MoreText="..." AutoHyperLink="TRUE" AutoNewLine="TRUE"><Column Name="Body"/></Limit>
+                            </Default>
+                        </Switch>
+                    </Default>
+                    </Switch>
+                    <HTML><![CDATA[</td></tr></table></td></tr></table>]]></HTML> 
+                </DisplayBidiPattern>
+            </Field>
+            <Field ReadOnly="TRUE" Type="Computed" Name="ThreadingNoIndent" DisplayName="Subject" DisplayNameSrcField="Title" AuthoringInfo="(linked to item with edit menu)" >
+               <FieldRefs>
+                    <FieldRef Name="Title"/>
+                    <FieldRef Name="ID"/>
+                    <FieldRef Name="Ordering"/>
+                    <FieldRef Name="ThreadID"/>
+                    <FieldRef Name="Body"/>
+                    <FieldRef Name="GUID"/>
+                </FieldRefs>
+                <DisplayPattern>
+                    <HTML><![CDATA[<table PostID="]]></HTML><Column Name="GUID" HTMLEncode="TRUE"/><HTML><![CDATA[" border=0 cellpadding=0 cellspacing=0 width="100%"><tr>]]></HTML>
+                    <HTML><![CDATA[<td class="ms-vb" style="padding-top: 1px;">]]></HTML>
+                    <HTML><![CDATA[<a name="post"  style="cursor: default" tabindex="2">]]></HTML>
+                    <HTML><![CDATA[<img name="widget" id="]]></HTML>    
+                    <Column Name="Ordering" HTMLEncode="TRUE"/>                    
+                    <HTML><![CDATA[" border="0" src="/_layouts/images/discbul.gif"></a>&nbsp;</td><td class="ms-vb" width="100%">]]></HTML>
+                    <IfEqual>
+                        <Expr1><GetVar Name="SelectedID"/></Expr1>
+                        <Expr2><Field Name="ID"/></Expr2>
+                        <Then>
+                            <HTML><![CDATA[<b>]]></HTML>
+                            <Column HTMLEncode="TRUE" Name="Title"/>
+                            <HTML><![CDATA[</b>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </Then>
+                        <Else>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML>" Ordering="</HTML>
+                                    <Column Name="Ordering" HTMLEncode="TRUE"/>
+                                    <HTML>" ThreadID="</HTML>
+                                    <Column Name="ThreadID" HTMLEncode="TRUE"/>
+                                    <HTML>" Subject="</HTML>
+                                    <Column Name="Title" StripWS="TRUE" HTMLEncode="TRUE"/>           	
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                 </Default>
+                            </FieldSwitch>
+                        	            <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                        	            <URL />
+                        	            <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                        	            <Column HTMLEncode='TRUE' Name='Title' Default='(no subject)'/>
+                        	            <HTML><![CDATA[</a>]]></HTML>
+                                        <IfNew>
+                                            <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                            <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                                        </IfNew>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                 </Default>
+                            </FieldSwitch>
+                        </Else>
+                    </IfEqual>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>
+                    <HTML><![CDATA[<table name="body"]]></HTML>
+                        <HTML><![CDATA[ STYLE="display:" width=100%><tr><td class="ms-vb" width=8>&nbsp;</td><td class="ms-vb">]]></HTML>
+                        <Switch>
+                        <Expr><Column Name="Body"/></Expr>
+                        <Case Value=""><HTML>(no text)</HTML></Case>
+                        <Default>
+                            <Switch>
+                                <Expr><FieldProperty Name="Body" Select="RichText"/></Expr>
+                                <Case Value="TRUE">
+                                    <HTML><![CDATA[<div>]]></HTML><Limit Len="400" MoreText="..." AutoHyperLinkNoEncoding="TRUE"><Column Name="Body"/></Limit><HTML><![CDATA[</div>]]></HTML>
+                                </Case>
+                                <Default>
+                                    <Limit Len="400" MoreText="..." AutoHyperLink="TRUE" AutoNewLine="TRUE"><Column Name="Body"/></Limit>
+                                </Default>
+                            </Switch>
+                        </Default>
+                        </Switch>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>
+                </DisplayPattern>
+                <DisplayBidiPattern>
+                    <HTML><![CDATA[<table PostID="]]></HTML><Column Name="GUID" HTMLEncode="TRUE"/><HTML><![CDATA[" border=0 cellpadding=0 cellspacing=0 width="100%"><tr>]]></HTML>
+                    <HTML><![CDATA[<td class="ms-vb" style="padding-top: 1px;">]]></HTML>
+                    <HTML><![CDATA[<a name="post"  style="cursor: default" tabindex="2">]]></HTML>
+                    <HTML><![CDATA[<img name="widget" id="]]></HTML>    
+                    <Column Name="Ordering" HTMLEncode="TRUE"/>                    
+                    <HTML><![CDATA[" border="0" src="/_layouts/images/discbul.gif"></a>&nbsp;</td><td class="ms-vb" width="100%">]]></HTML>
+                    <IfEqual>
+                        <Expr1><GetVar Name="SelectedID"/></Expr1>
+                        <Expr2><Field Name="ID"/></Expr2>
+                        <Then>
+                            <HTML><![CDATA[<b>]]></HTML>
+                            <Column HTMLEncode="TRUE" Name="Title"/>
+                            <HTML><![CDATA[</b>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </Then>
+                        <Else>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML>" Ordering="</HTML>
+                                    <Column Name="Ordering" HTMLEncode="TRUE"/>
+                                    <HTML>" ThreadID="</HTML>
+                                    <Column Name="ThreadID" HTMLEncode="TRUE"/>
+                                    <HTML>" Subject="</HTML>
+                                    <Column Name="Title" StripWS="TRUE" HTMLEncode="TRUE"/>           	
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        	            <HTML><![CDATA[<p dir=]]></HTML><Property Select="Direction"/><HTML><![CDATA[><a onfocus="OnLink(this)" href="]]></HTML>
+                        	            <URL />
+                        	            <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                        	            <Column HTMLEncode='TRUE' Name='Title' Default='(no subject)'/>
+                        	            <HTML><![CDATA[</a>]]></HTML>
+                                        <IfNew>
+                                            <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                            <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                                        </IfNew>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"></Case>
+                                <Default>
+                                            <HTML><![CDATA[</p>]]></HTML>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        </Else>
+                    </IfEqual>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>
+                    <HTML><![CDATA[<table name="body"]]></HTML>
+                        <HTML><![CDATA[ STYLE="display:" width=100%><tr><td class="ms-vb" width=8>&nbsp;</td><td class="ms-vb">]]></HTML>
+                        <Switch>
+                        <Expr><Column Name="Body"/></Expr>
+                        <Case Value=""><HTML>(no text)</HTML></Case>
+                        <Default>
+                            <Switch>
+                                <Expr><FieldProperty Name="Body" Select="RichText"/></Expr>
+                                <Case Value="TRUE">
+                                    <HTML><![CDATA[<div>]]></HTML><Limit Len="400" MoreText="..." AutoHyperLinkNoEncoding="TRUE"><Column Name="Body"/></Limit><HTML><![CDATA[</div>]]></HTML>
+                                </Case>
+                                <Default>
+                                    <Limit Len="400" MoreText="..." AutoHyperLink="TRUE" AutoNewLine="TRUE"><Column Name="Body"/></Limit>
+                                </Default>
+                            </Switch>
+                        </Default>
+                        </Switch>
+                    <HTML><![CDATA[</td></tr></table>]]></HTML>                    
+                </DisplayBidiPattern>
+            </Field>
+            <Field Name="Body" RichText="TRUE" Type="Note" DisplayName="Text" Sortable="FALSE" NumLines="10"></Field>
+            <Field ReadOnly="TRUE" Type="Computed" Name="Edit" Sortable="FALSE" Filterable="FALSE" DisplayName="Edit" AuthoringInfo="(link to edit item)" >
+                <DisplayPattern>
+					<HTML><![CDATA[<a href="]]></HTML><URL Cmd="Edit"/>
+					<HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self" title="]]></HTML><HTML>Edit</HTML><HTML><![CDATA[">]]></HTML>
+                        <HTML><![CDATA[<img border="0" alt="]]></HTML><HTML>Edit</HTML><HTML><![CDATA[" src="/_layouts/images/edititem.gif">]]></HTML>
+					<HTML><![CDATA[</a>]]></HTML>
+                </DisplayPattern>
+            </Field>            
+            <Field ReadOnly="TRUE" Type="Computed" Name="Reply" Sortable="FALSE" Filterable="FALSE" DisplayName="Reply"> 
+                <DisplayPattern>
+                	<HTML><![CDATA[<a href="]]></HTML>
+                	<URL Cmd="New"/>
+                	<HTML><![CDATA[" ONCLICK="javascript:ReplyItem(']]></HTML>
+                	<ScriptQuote NotAddingQuote="TRUE"><URL Cmd="New"/></ScriptQuote>
+                	<HTML><![CDATA[',']]></HTML>
+                	<Field Name="Ordering" StripWS="TRUE" URLEncode="TRUE"/>
+                	<HTML><![CDATA[',']]></HTML>
+                	<Field Name="ThreadID" StripWS="TRUE" URLEncode="TRUE"/>
+                	<HTML><![CDATA[',']]></HTML>
+                	<Column Name="Title" StripWS="TRUE" URLEncode="TRUE"/>                	
+                	<HTML><![CDATA[', false);return false;" target="_self">]]></HTML>
+                    <HTML><![CDATA[<img id="replyButton" border="0" alt="]]></HTML><HTML>Reply</HTML>
+                    <HTML><![CDATA[" src="/_layouts/images/reply.gif">]]></HTML>
+					<HTML><![CDATA[</a>]]></HTML>					
+                </DisplayPattern>
+            </Field>
+            <Field Name="InstanceID" DisplayName="InstanceID" ColName="tp_InstanceID" ReadOnly="TRUE" Hidden="TRUE" 
+                    Type="Integer" Min="0" Max="99991231" Filterable="TRUE" Sortable="TRUE">
+            </Field>
+            <Field ColName="tp_ItemOrder" Name="Order" DisplayName="Order" Type="Number" Hidden="TRUE"></Field>
+        </Fields>
+        <Default>
+            <Forms>
+                <Form Type="" Url="" />
+            </Forms>
+        </Default>
+            </MetaData>
+        </BaseType>
+        <BaseType Title="Vote or Survey" Image="_layouts/images/itsurvey.gif" Type="4">
+            <MetaData>
+                <Fields>
+                    <Field ColName="tp_ID" ReadOnly="TRUE" Type="Counter" Name="ID" PrimaryKey="TRUE" DisplayName="ID" Required="TRUE"></Field>
+                    <Field ReadOnly="TRUE" Type="Text" Hidden="TRUE" Name="Title" DisplayName="Title"></Field>
+                    <Field ColName="tp_Modified" ReadOnly="TRUE" Type="DateTime" Name="Modified" DisplayName="Modified" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Created" ReadOnly="TRUE" Type="DateTime" Name="Created" DisplayName="Created" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Author" ReadOnly="TRUE" Type="User" List="UserInfo" Presence="FALSE" Name="Author" DisplayName="Created By" ForcedDisplay="***" Sortable="FALSE" AllowMultiVote="FALSE" ></Field>
+                    <Field ColName="tp_Editor" ReadOnly="TRUE" Type="User" List="UserInfo" Presence="FALSE" Name="Editor" DisplayName="Modified By" ForcedDisplay="***" Sortable="FALSE" ></Field>
+                    <Field ColName="tp_Version" Hidden="TRUE" ReadOnly="TRUE" Type="Integer" SetAs="owshiddenversion" Name="owshiddenversion" DisplayName="owshiddenversion"></Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="DisplayResponseNoMenu" Sortable="FALSE" DisplayName="View Response" AuthoringInfo="(hyperlink)" >
+                        <FieldRefs>
+                           <FieldRef Name="ID"/>
+                           <FieldRef Name="Editor"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+						<HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML><URL /><HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self" ID="onetidViewResponse">]]></HTML><HTML>View Response #</HTML><Column HTMLEncode='TRUE' Name="ID"/><HTML><![CDATA[</a>]]></HTML>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="DisplayResponse" Sortable="FALSE" DisplayName="View Response" ClassInfo="Menu" AuthoringInfo="(hyperlink with edit menu)" >
+                        <FieldRefs>
+                           <FieldRef Name="ID"/>
+                           <FieldRef Name="DisplayResponseNoMenu"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"><Field Name="DisplayResponseNoMenu"/></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                    <Field Name="DisplayResponseNoMenu"/>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                        </DisplayPattern>
+                    </Field>
+                    <Field Name="InstanceID" DisplayName="InstanceID" ColName="tp_InstanceID" ReadOnly="TRUE" Hidden="TRUE" 
+                           Type="Integer" Min="0" Max="99991231" Filterable="TRUE" Sortable="TRUE">
+                    </Field>
+                    <Field ColName="tp_ItemOrder" Name="Order" DisplayName="Order" Type="Number" Hidden="TRUE"></Field>
+                </Fields>
+                <Default>
+                    <Forms>
+                        <Form Type="" Url="" />
+                    </Forms>
+                </Default>
+            </MetaData>
+        </BaseType>
+         <BaseType Title="Issues List" Image="_layouts/images/itgen.gif" Type="5">
+            <MetaData>
+                <Fields>
+                    <Field ColName="tp_ID" ReadOnly="TRUE" Type="Counter" Name="ID" PrimaryKey="TRUE" DisplayName="ID"></Field>
+                    <Field Type="Text" Name="Title" DisplayName="Title" Required="TRUE" ></Field>
+                    <Field ColName="tp_Modified" ReadOnly="TRUE" Type="DateTime" Name="Modified" DisplayName="Modified" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Created" ReadOnly="TRUE" Type="DateTime" Name="Created" DisplayName="Created" StorageTZ="TRUE"></Field>
+                    <Field ColName="tp_Author" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Author" DisplayName="Created By" ></Field>
+                    <Field ColName="tp_Editor" ReadOnly="TRUE" Type="User" List="UserInfo" Name="Editor" DisplayName="Modified By" ></Field>
+                    <Field ColName="tp_Version" Hidden="TRUE" ReadOnly="TRUE" Type="Integer" SetAs="owshiddenversion" Name="owshiddenversion" DisplayName="owshiddenversion"></Field>
+                    <Field ColName="tp_HasAttachment" Type="Attachments" Name="Attachments" DisplayName="Attachments"></Field>
+                    <Field ColName="tp_ModerationStatus" ReadOnly="TRUE" Type="ModStat" Name="_ModerationStatus" DisplayName="Approval Status" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE">
+                        <CHOICES>
+                            <CHOICE>0;#Approved</CHOICE>
+                            <CHOICE>1;#Rejected</CHOICE>
+                            <CHOICE>2;#Pending</CHOICE>
+                        </CHOICES>
+                        <Default>0</Default>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Note" Name="_ModerationComments" DisplayName="Approver Comments" Hidden="TRUE" CanToggleHidden="TRUE" Sortable="FALSE"></Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="Edit" Sortable="FALSE" Filterable="FALSE" DisplayName="Edit" AuthoringInfo="(link to edit item)" >
+                        <DisplayPattern>
+							<HTML><![CDATA[<a href="]]></HTML><URL Cmd="Edit"/>
+							<HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <HTML><![CDATA[<img border="0" alt="]]></HTML><HTML>Edit</HTML><HTML><![CDATA[" src="/_layouts/images/edititem.gif">]]></HTML>
+							<HTML><![CDATA[</a>]]></HTML>
+                        </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Title" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" >
+                        <FieldRefs>
+                            <FieldRef Name="Title"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+							<HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML><URL/>
+							<HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <Column HTMLEncode='TRUE' Name='Title' Default='(no title)'></Column>
+							<HTML><![CDATA[</a>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </DisplayPattern>
+                        <DisplayBidiPattern>
+							<HTML><![CDATA[<p dir=]]></HTML><Property Select="Direction"/><HTML><![CDATA[><a onfocus="OnLink(this)" href="]]></HTML><URL/>
+							<HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" target="_self">]]></HTML>
+                                <Column HTMLEncode='TRUE' Name='Title' Default='(no title)'></Column>
+							<HTML><![CDATA[</a>]]></HTML>
+                            <IfNew>
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML><HTML>__LText(100)New</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                                <HTML><![CDATA[</p>]]></HTML>
+                        </DisplayBidiPattern>                         
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Title" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" >
+                        <FieldRefs>
+                            <FieldRef Name="Title"/>
+                            <FieldRef Name="ID"/>
+                            <FieldRef Name="LinkTitleNoMenu"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <FieldSwitch> 
+                                <Expr><GetVar Name="FreeForm"/></Expr>
+                                <Case Value="TRUE"><Field Name="LinkTitleNoMenu"/></Case>
+                                <Default>
+                                    <HTML><![CDATA[<table height="100%" cellspacing=0 class="ms-unselectedtitle" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                                    <Counter Type="View"/><HTML>" ItemId="</HTML>
+                                    <Column Name="ID" HTMLEncode="TRUE"/>
+                                    <HTML><![CDATA["><tr><td width="100%" Class="ms-vb">]]></HTML>
+                                    <Field Name="LinkTitleNoMenu"/>
+                                    <HTML><![CDATA[</td><td><img src="/_layouts/images/blank.gif" width=13 style="visibility: hidden" alt=""></td></tr></table>]]></HTML>
+                                </Default>
+                            </FieldSwitch>
+                         </DisplayPattern>
+                    </Field>
+                    <Field ReadOnly="TRUE" Type="Computed" Name="SelectTitle" DisplayName="Select" Hidden="TRUE" CanToggleHidden="TRUE" Dir="" AuthoringInfo="(web part connection)" HeaderImage="blank.gif" Sortable="FALSE" >
+                        <FieldRefs>
+                            <FieldRef Name="ID"/>
+                        </FieldRefs>
+                        <DisplayPattern>
+                            <IfEqual>
+                                <Expr1><GetVar Name="SelectedID"/></Expr1>
+                                <Expr2><Column Name="ID"/></Expr2>
+                                <Then>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbsel.gif" alt="]]></HTML>
+                                    <HTML>Selected</HTML><HTML><![CDATA[">]]></HTML>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<a href="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" onclick="javascript:SelectField(']]></HTML><GetVar Name="View"/><HTML><![CDATA[',']]></HTML>
+                                    <ScriptQuote NotAddingQuote="TRUE"><Column Name="ID"/></ScriptQuote><HTML><![CDATA[');return false;" target="_self">]]></HTML>
+                                    <HTML><![CDATA[<img border="0" align="absmiddle" style="cursor: hand" src="/_layouts/images/rbunsel.gif"  alt="]]></HTML>
+                                    <HTML>Normal</HTML><HTML><![CDATA[">]]></HTML>
+                                    <HTML><![CDATA[</a>]]></HTML>
+                                </Else>
+                            </IfEqual>
+                        </DisplayPattern>
+                    </Field>
+                    <Field Name="InstanceID" DisplayName="InstanceID" ColName="tp_InstanceID" ReadOnly="TRUE" Hidden="TRUE" 
+                           Type="Integer" Min="0" Max="99991231" Filterable="TRUE" Sortable="TRUE">
+                    </Field>
+                    <Field ColName="tp_ItemOrder" Name="Order" DisplayName="Order" Type="Number" Hidden="TRUE"></Field>
+                    <Field ColName="tp_GUID" ReadOnly="TRUE" Hidden="TRUE" Type="Guid" Name="GUID" DisplayName="GUID"></Field>
+                    <Field Sealed="TRUE" ReadOnly="TRUE" Name="IssueID" ColName="int1" Type="Counter"  DisplayName="Issue ID"></Field>
+                    <Field Sealed="TRUE" Hidden="TRUE" ReadOnly="TRUE" Name="RelatedID" Type="Guid" ColName="uniqueidentifier1" DisplayName="Related ID"></Field>					
+                    <Field ColName="tp_IsCurrent" Type="Boolean" Name="IsCurrent" DisplayName="Current"  ReadOnly="TRUE">			
+                        <Default>1</Default>
+                    </Field>
+                    <Field Type="User" List="UserInfo" Name="AssignedTo" DisplayName="Assigned To" ColName="int3"></Field>
+                    <Field  FromBaseType="TRUE" Type="Choice" Name="Status" ColName="nvarchar1" DisplayName="Status">
+                        <CHOICES>
+                            <CHOICE>Active</CHOICE>
+                            <CHOICE>Resolved</CHOICE>
+                            <CHOICE>Closed</CHOICE>
+                        </CHOICES>
+                        <Default>Active</Default>
+                    </Field>
+                    <Field FromBaseType="TRUE"  Type="Choice" Name="Category" ColName="nvarchar2" DisplayName="Category" >
+                        <CHOICES>
+                            <CHOICE>(1) Category1</CHOICE>
+                            <CHOICE>(2) Category2</CHOICE>
+                            <CHOICE>(3) Category3</CHOICE>
+                        </CHOICES>
+                        <Default>(2) Category2</Default>
+                    </Field>
+                    <Field Sealed="TRUE" Type="Integer"  Name="RelatedIssue" ColName="int2" DisplayName="Add Related Issue" 
+                        Description="Type the Issue ID of one issue" ></Field>
+                </Fields>
+                <Default>
+                    <Forms>
+                        <Form Type="" Url="" />
+                    </Forms>
+                </Default>
+            </MetaData>
+        </BaseType>
+    </BaseTypes>
+    <Configurations>
+        <Configuration ID="-1" Name="NewWeb"/>
+        <Configuration ID="0" Name="Default">
+            <Lists>
+                <List Title="Shared Documents"
+                    Url="Shared Documents"
+                    QuickLaunchUrl="Shared Documents/Forms/AllItems.aspx"
+                    Type="101" />
+                    
+                    
+                    
+                <List Title="General Discussion"
+                    Url="Lists/General Discussion"
+                    QuickLaunchUrl="Lists/General Discussion/AllItems.aspx"
+                    Type="108" />
+                    
+                    
+                                          
+                <List Title="Announcements" Type="104"
+                    Url="Lists/Announcements" />
+                       
+                                            
+                <List Title="Links" Type="103"
+                    Url="Lists/Links" />
+                     
+                                          
+                <List Title="Contacts" 
+                    Url="Lists/Contacts"                
+                    QuickLaunchUrl="Lists/Contacts/AllItems.aspx"
+                    Type="105" />
+                    
+                                          
+                                            
+                <List Title="Events" Type="106"
+                    Url="Lists/Events" />
+                      
+                       
+                <List Title="Tasks" 
+                    Url="Lists/Tasks"                
+                    QuickLaunchUrl="Lists/Tasks/AllItems.aspx"
+                    Type="107" />
+                    
+                                          
+                                           
+                <List Title="Site Template Gallery"
+                    Type="111"
+                    Url="_catalogs/wt"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="Web Part Gallery"
+                    Type="113"
+                    Url="_catalogs/wp"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="List Template Gallery"
+                    Type="114"
+                    Url="_catalogs/lt"
+                    RootWebOnly="TRUE" />
+                    
+            </Lists>
+            <Modules>
+                <Module Name="Default"/>
+                <Module Name="WebPartPopulation"/>
+            </Modules>
+        </Configuration>
+        <Configuration ID="1" Name="Blank"> 
+            <Lists>
+                <List Title="Site Template Gallery"
+                    Type="111"
+                    Url="_catalogs/wt"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="Web Part Gallery"
+                    Type="113"
+                    Url="_catalogs/wp"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="List Template Gallery"
+                    Type="114"
+                    Url="_catalogs/lt"
+                    RootWebOnly="TRUE" />
+                    
+            </Lists>                    
+            <Modules>
+                <Module Name="DefaultBlank"/>
+                <Module Name="WebPartPopulation"/>
+            </Modules>                
+        </Configuration>             
+        <Configuration ID="2" Name="DWS">
+            <Lists>
+                <List Title="Shared Documents" Type="101" />
+                    
+                <List Title="General Discussion"
+                    Url="Lists/General Discussion"
+                    QuickLaunchUrl="Lists/General Discussion/AllItems.aspx"
+                    Type="108" />
+                    
+                    
+                                          
+                <List Title="Announcements" Type="104"
+                    Url="Lists/Announcements" />
+                       
+                                            
+                <List Title="Contacts" 
+                    Url="Lists/Contacts"                
+                    QuickLaunchUrl="Lists/Contacts/AllItems.aspx"
+                    Type="105" />
+                    
+                                          
+                                            
+                <List Title="Links" Type="103"
+                    Url="Lists/Links" />
+                     
+                                          
+                <List Title="Events"
+                    Url="Lists/Events"                
+                    QuickLaunchUrl="Lists/Events/AllItems.aspx"
+                    Type="106" />
+                    
+                                          
+                                           
+                <List Title="Tasks" Type="107" />
+                    
+                <List Title="Site Template Gallery"
+                    Type="111"
+                    Url="_catalogs/wt"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="Web Part Gallery"
+                    Type="113"
+                    Url="_catalogs/wp"
+                    RootWebOnly="TRUE" />
+                    
+                <List Title="List Template Gallery"
+                    Type="114"
+                    Url="_catalogs/lt"
+                    RootWebOnly="TRUE" />
+                                          
+            </Lists>
+            <Modules>
+                <Module Name="DWS"/>
+                <Module Name="WebPartPopulation"/>
+            </Modules>
+        </Configuration>
+    </Configurations>    
+    <Modules>
+        <Module Name="Default" Url="" Path="">
+            <File Url="default.aspx" NavBarHome="True">
+                <View List="104" BaseViewID="0" WebPartZoneID="Left"/>
+                <View List="106" BaseViewID="0" WebPartZoneID="Left" WebPartOrder="2"/>
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                   <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:iwp="http://schemas.microsoft.com/WebPart/v2/Image">
+                        <Assembly>Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ImageWebPart</TypeName>
+                        <FrameType>None</FrameType>
+                        <Title>Site Image</Title>
+                        <iwp:ImageLink>/_layouts/images/homepage.gif</iwp:ImageLink>
+                   </WebPart>
+                   ]]>
+                </AllUsersWebPart>
+                <View List="103" BaseViewID="0" WebPartZoneID="Right" WebPartOrder="2"/>
+                <NavBarPage Name="Home" ID="1002" Position="Start">  </NavBarPage>
+                <NavBarPage Name="Home" ID="0" Position="Start">  </NavBarPage>
+            </File>
+        </Module>
+        <Module Name="DefaultBlank" Url="" Path="">
+            <File Url="default.aspx" NavBarHome="True" Type="Ghostable">
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                   <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:iwp="http://schemas.microsoft.com/WebPart/v2/Image">
+                        <Assembly>Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ImageWebPart</TypeName>
+                        <FrameType>None</FrameType>
+                        <Title>Site Image</Title>
+                        <iwp:ImageLink>/_layouts/images/homepage.gif</iwp:ImageLink>
+                   </WebPart>
+                   ]]>
+                </AllUsersWebPart>
+                <NavBarPage Name="Home" ID="1002" Position="Start">  </NavBarPage>
+                <NavBarPage Name="Home" ID="0" Position="Start">  </NavBarPage>
+            </File>                
+        </Module>
+        <Module Name="WebPartPopulation" List="113" Url="_catalogs/wp" Path="lists\wplib\dwp" RootWebOnly="TRUE">
+            <File Url="MSContentEditor.dwp" Type="GhostableInLibrary"/>
+            <File Url="MSPageViewer.dwp" Type="GhostableInLibrary"/>
+            <File Url="MSImage.dwp" Type="GhostableInLibrary"/>
+            <File Url="MSMembers.dwp" Type="GhostableInLibrary"/>
+            <File Url="MSSimpleForm.dwp" Type="GhostableInLibrary"/>
+            <File Url="MSXml.dwp" Type="GhostableInLibrary"/>
+        </Module>
+        <Module Name="DWS" Url="" Path="dws">
+            <File Url="default.aspx">
+                <View List="104" BaseViewID="3" WebPartZoneID="Top"/>
+                <View List="103" BaseViewID="3" WebPartZoneID="Right" WebPartOrder="2"/>
+                <View List="101" BaseViewID="6" WebPartZoneID="Left"/>
+                <View List="107" BaseViewID="7" WebPartZoneID="Left" WebPartOrder="2"/>
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                   <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                      <Assembly>Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+					  <TypeName>Microsoft.SharePoint.WebPartPages.MembersWebPart</TypeName>
+                      <Title>Members</Title>
+                      <Description>Use the Members Web Part to see a list of the site members and their online status.</Description>
+				      <FrameType>Standard</FrameType>
+				      <IsVisible>true</IsVisible>
+	      		   </WebPart>
+                   ]]>
+                </AllUsersWebPart>
+                <NavBarPage Name="Home" ID="1002" Position="Start">  </NavBarPage>
+                <NavBarPage Name="Home" ID="0" Position="Start">  </NavBarPage>
+            </File>
+        </Module>
+    </Modules>
+</Project>

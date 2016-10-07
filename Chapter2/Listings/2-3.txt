@@ -1,0 +1,12 @@
+vti_approvallevel:SR|
+vti_categories:VW|
+Routing Status:SW|In Progress
+vti_assignedto:SR|
+Document Status:SW|Under Review
+K2Process:SW|
+vti_cachedcustomprops:VX|vti_approvallevel vti_categories Routing\\ Status vti_assignedto Document\\ Status K2Process vti_title Route\\ for\\ Approval
+vti_modifiedby:SR|SPS\\administrator
+vti_cachedtitle:SR|1Q2004 Quarterly Report
+vti_title:SR|1Q2004 Quarterly Report
+Route for Approval:SW|1
+vti_author:SR|SPS\\administrator

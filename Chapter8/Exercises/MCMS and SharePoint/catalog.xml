@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="yes"?>
+<templateCatalog>
+	<type FileExt="*">
+		<template name="(None)">
+			<description>Do not display the attachment or any properties for the file.</description>
+			<url></url>
+			<sampleRenderingUrl></sampleRenderingUrl>
+		</template>
+		<template name="Attachment with Icon">
+			<description>Attach the selected item and display it with an icon and its file name.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\AttachmentIcon.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleAttachmentIcon.xml</sampleRenderingUrl>
+		</template>
+		<template name="Attachment with Icon and Properties">
+			<description>Attach the selected item and display it with an icon, its file name and its SharePoint library file properties.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\AttachmentIconProps.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleAttachmentIconProps.xml</sampleRenderingUrl>
+		</template>
+	</type>
+	<type FileExt=".jpg .gif .jpeg .png .bmp">
+		<template name="(None)">
+			<description>Do not display the image or any properties for the file.</description>
+			<url></url>
+			<sampleRenderingUrl></sampleRenderingUrl>
+		</template>
+		<template name="Inline Image">
+			<description>Display the selected image item inline.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\ImageTagOnly.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleImageTagOnly.xml</sampleRenderingUrl>
+		</template>
+		<template name="Inline Image with Properties">
+			<description>Display the selected image item inline along with its SharePoint library file properties.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\ImageAndProps.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleImageAndProps.xml</sampleRenderingUrl>
+		</template>
+	</type>
+	<type FileExt="contentxml">
+		<template name="Employee Profiles">
+			<description>Displays the employee profile in line.</description>
+			<url>c:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\Content.xsl</url>
+			<sampleRenderingUrl></sampleRenderingUrl>
+		</template>
+		<template name="(None)">
+			<description>Do not display the content of the document inline</description>
+			<url></url>
+			<sampleRenderingUrl></sampleRenderingUrl>
+		</template>
+		<template name="Case Study Microsoft Office InfoPath forms">
+			<description>Display the content of a Case Study Microsoft Office InfoPath form inline.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\CaseStudyContent.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleCaseStudyContent.xml</sampleRenderingUrl>
+		</template>
+		<template name="Microsoft Office WordML documents">
+			<description>Display the content of a Microsoft Office WordML document inline.</description>
+			<url>C:\Program Files\Microsoft Content Management Server\Server\IIS_CMS\WssIntegration\Dialogs\WssDocumentFinder\TemplateCatalog\WordNetHtml.xsl</url>
+			<sampleRenderingUrl>/MCMS/cms/WssIntegration/Dialogs/WssDocumentFinder/TemplateCatalog/SampleWordNetHtml.xml</sampleRenderingUrl>
+		</template>
+	</type>
+</templateCatalog>

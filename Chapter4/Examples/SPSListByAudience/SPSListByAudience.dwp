@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+	<Title>Display List By Audience</Title>
+	<Description>Displays a connected list by Audience</Description>
+	<Assembly>SPSListByAudience</Assembly>
+	<TypeName>SPSListByAudience.Grouper</TypeName>
+</WebPart>
